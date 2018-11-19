@@ -88,7 +88,7 @@ h2[property][mv-mode="edit"] {
     border-left: 3px solid hsl(357, 45%, 59%);
 }
 
-section > [property="description"] {
+.basic-parameters [property="description"] {
     font-style: italic;
 }
 
