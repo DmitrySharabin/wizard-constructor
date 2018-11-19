@@ -30,8 +30,11 @@
         </aside>
         <section class="basic-parameters">
             <h3 class="hidden">Базовые параметры</h3>
+            <p class="hidden">id задачи</p>
             <p class="hidden" property="id" mv-default=" "></p>
+            <p class="hidden">Название</p>
             <h2 property="name" mv-default=" "></h2>
+            <p class="hidden">Описание</p>
             <p property="description" mv-default=" "></p>
             <label class="hidden">
                 Тип
@@ -43,58 +46,75 @@
             </label>
         </section>
         <h3 class="hidden">Параметры уведомления</h3>
-        <section class="hidden" property="run_at" mv-multiple>
+        <section class="hidden" property="run_at" mv-multiple mv-initial-items="0">
+            <p class="hidden">Время</p>
             <p type="text" property="at" mv-default="08:00"></p>
             <label>
                 Оповещение <input type="checkbox" property="bell" checked>
             </label>
         </section>
         <label class="hidden">
-            Режим
+            Режим работы
             <select property="exec_mode">
                 <option>background</option>
                 <option>permanent</option>
             </select>
         </label>
         <h3 class="hidden">Шаги</h3>
-        <details property="steps" mv-multiple>
+        <details property="steps" mv-multiple mv-initial-items="0">
             <summary>Шаг [id]</summary>
+            <p class="hidden">Номер шага</p>
             <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
+            <p class="hidden">Содержание шага</p>
             <p property="name" mv-default=" "></p>
+            <p class="hidden">Текст в хлебных крошках</p>
             <p class="hidden" property="short_name" mv-default=" "></p>
+            <p class="hidden">Примечание к шагу</p>
             <p property="description" mv-plugins="tinymce" mv-default=" "></p>
-            <p property="documents" mv-multiple mv-default=" "></p>
-            <h4 class="hidden">Чек-листы</h4>
-            <section property="checklists" mv-multiple>
+            <p class="hidden">id документов</p>
+            <p property="documents" mv-multiple mv-default=" " mv-initial-items="0"></p>
+            <h4 class="hidden">Списки действий</h4>
+            <section property="checklists" mv-multiple mv-initial-items="0">
+                <p class="hidden">id списка</p>
                 <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
+                <p class="hidden">Текст инструкции/пояснения к пунктам списка</p>
                 <p property="name" mv-plugins="tinymce" mv-default=" "></p>
+                <p class="hidden">Примечание к пунктам списка</p>
                 <p property="description" mv-plugins="tinymce" mv-default=" "></p>
                 <label class="hidden">
                     <input type="checkbox" property="multiple" checked>
                     <span>Множественный выбор</span>
                 </label>
-                <p property="documents" mv-multiple></p>
-                <h5 class="hidden">Пункты</h5>
+                <p class="hidden">id документов</p>
+                <p property="documents" mv-multiple mv-initial-items="0"></p>
+                <h5 class="hidden">Пункты списка</h5>
                 <section property="items" mv-multiple>
+                    <p class="hidden">id пункта</p>
                     <p class="hidden" property="id" mv-default="[checklists.$index + 1].[$index + 1]" mv-mode="read"></p>
                     <label class="list-items">
                         <input type="[if(multiple, 'checkbox', 'radio')]" name="list-item">
                         <p property="name" mv-plugins="tinymce" mv-default=" "></p>
                     </label>
-                    <p property="documents" mv-multiple></p>
+                    <p class="hidden">id документов</p>
+                    <p property="documents" mv-multiple mv-initial-items="0"></p>
                     <label class="hidden">
                         <input type="checkbox" property="required" checked>
                         <span>Обязательный</span>
                     </label>
                 </section>
             </section>
+            <p class="hidden">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
             <p property="footer_description" mv-plugins="tinymce" mv-default=" "></p>
         </details>
         <h3 class="hidden">Уведомление</h3>
         <section class="hidden" property="notification">
+            <p class="hidden">Заголовок</p>
             <p property="title"></p>
+            <p class="hidden">Основное содержание</p>
             <p property="description" mv-plugins="tinymce"></p>
+            <p class="hidden">Пояснительный текст над кнопкой закрытия уведомления</p>
             <p property="footer" mv-plugins="tinymce"></p>
+            <p class="hidden">Текст на кнопке закрытия уведомления</p>
             <p property="button_text"></p>
         </section>
     </main>
