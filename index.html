@@ -43,7 +43,7 @@
             </label>
         </section>
         <h3 class="hidden">Параметры уведомления</h3>
-        <section property="run_at" mv-multiple>
+        <section class="hidden" property="run_at" mv-multiple>
             <p type="text" property="at" mv-default="08:00"></p>
             <label>
                 Оповещение <input type="checkbox" property="bell" checked>
@@ -90,8 +90,8 @@
             </section>
             <p property="footer_description" mv-plugins="tinymce" mv-default=" "></p>
         </details>
-        <h3>Уведомление</h3>
-        <section property="notification">
+        <h3 class="hidden">Уведомление</h3>
+        <section class="hidden" property="notification">
             <p property="title"></p>
             <p property="description" mv-plugins="tinymce"></p>
             <p property="footer" mv-plugins="tinymce"></p>
