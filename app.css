@@ -27,8 +27,12 @@ footer {
     color: white;
 }
 
+h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
     font-weight: 500;
 }
 
@@ -49,26 +53,91 @@ footer a {
     padding: 30px;
 }
 
-[mv-app] * {
+/* Скрытые в режиме просмотра элементы */
+.hidden {
+    display: none;
+}
+
+/*
+    Отображаются в режиме редактирования (исключаем метки, чтобы сохранить для них отображение grid)
+*/
+[mv-app][mv-mode="edit"] .hidden:not(.list-items) {
     display: block;
 }
 
-[mv-app] label {
+/* Стилизуем элементы списков в шагах */
+[property="checklists"] .list-items:not(.hidden) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px 50px;
-    padding: 10px;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    margin: 5px;
 }
 
-[mv-app] fieldset {
-    border-radius: 5px;
-    margin: 10px;
+/* Стилизация редактируемых блоков */
+p[property][mv-mode="edit"],
+h2[property][mv-mode="edit"] {
+    border: 1px solid hsl(179, 74%, 36%);
+    border-radius: 3px;
+    background-color: #eee;
+    min-height: 50px;
 }
 
-[mv-app] legend {
-    font-weight: 400;
+/* Стилизация примечаний */
+[property="steps"]>[property="description"] {
+    padding: 5px 20px;
+    border-left: 3px solid hsl(357, 45%, 59%);
 }
 
+section > [property="description"] {
+    font-style: italic;
+}
+
+/* Стилизация документов */
 [property="documents"] {
-    grid-column: -1;
+    padding: 10px;
+    border-left: 3px solid hsl(179, 74%, 36%);
+    border-radius: 10px;
+}
+
+/* Стилизация инструкций к спискам */
+[property="checklists"] > p[property="name"] {
+    font-weight: 500;
+}
+
+/* Стилизация хлебных крошек */
+.breadcrumbs {
+    position: fixed;
+    width: 300px;
+    left: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    padding: 10px;
+    z-index: 100;
+}
+
+.breadcrumbs ol {
+    list-style-type: none;
+    counter-reset: num;
+    padding: 0;
+}
+
+.breadcrumbs ol li {
+    position: relative;
+    margin: 0 0 6px 1.8em;
+    padding: 4px 8px;
+}
+
+.breadcrumbs li::before {
+    content: counter(num);
+    counter-increment: num;
+    position: absolute;
+    top: -1.8px;
+    left: -1.8em;
+    width: 1.8em;
+    height: 1.8em;
+    border: 4px double white;
+    border-radius: 50%;
+    background-color: hsl(179, 74%, 36%);
+    color: white;
+    text-align: center;
 }
