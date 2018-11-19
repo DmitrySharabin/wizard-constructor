@@ -58,6 +58,15 @@ footer a {
     display: none;
 }
 
+/* Стилизация блоков с шагами визарда */
+[property="steps"] {
+    margin: 10px;
+}
+
+summary {
+    cursor: default;
+}
+
 /*
     Отображаются в режиме редактирования (исключаем метки, чтобы сохранить для них отображение grid)
 */
@@ -108,11 +117,20 @@ h2[property][mv-mode="edit"] {
 .breadcrumbs {
     position: fixed;
     width: 300px;
+    max-height: 400px;
+    overflow: scroll;
     left: 10px;
     background-color: #fff;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     padding: 10px;
     z-index: 100;
+}
+
+.breadcrumbs h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: hsl(179, 74%, 36%);
+    color: white;
 }
 
 .breadcrumbs ol {
@@ -123,7 +141,7 @@ h2[property][mv-mode="edit"] {
 
 .breadcrumbs ol li {
     position: relative;
-    margin: 0 0 6px 1.8em;
+    margin: 0 0 6px 2em;
     padding: 4px 8px;
 }
 
@@ -131,10 +149,11 @@ h2[property][mv-mode="edit"] {
     content: counter(num);
     counter-increment: num;
     position: absolute;
-    top: -1.8px;
-    left: -1.8em;
-    width: 1.8em;
-    height: 1.8em;
+    top: -2px;
+    left: -2em;
+    width: 2em;
+    height: 2em;
+    line-height: 1.5em;
     border: 4px double white;
     border-radius: 50%;
     background-color: hsl(179, 74%, 36%);

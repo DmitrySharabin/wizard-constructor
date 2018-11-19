@@ -57,8 +57,8 @@
             </select>
         </label>
         <h3 class="hidden">Шаги</h3>
-        <section property="steps" mv-multiple>
-            <h4>Шаг [id]</h4>
+        <details property="steps" mv-multiple>
+            <summary>Шаг [id]</summary>
             <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
             <p property="name" mv-default=" "></p>
             <p class="hidden" property="short_name" mv-default=" "></p>
@@ -89,7 +89,7 @@
                 </section>
             </section>
             <p property="footer_description" mv-plugins="tinymce" mv-default=" "></p>
-        </section>
+        </details>
         <h3>Уведомление</h3>
         <section property="notification">
             <p property="title"></p>
