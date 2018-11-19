@@ -1,0 +1,74 @@
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #eee;
+    color: #444;
+    font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+header h1,
+footer {
+    margin: 0;
+    padding: 20px;
+    background-color: hsl(179, 74%, 36%);
+    color: white;
+}
+
+h2,
+h3 {
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-weight: 500;
+}
+
+[mv-app] {
+    background-color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    width: 810px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+[mv-app] * {
+    display: block;
+}
+
+[mv-app] label {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 50px;
+    padding: 10px;
+}
+
+[mv-app] fieldset {
+    border-radius: 5px;
+    margin: 10px;
+}
+
+[mv-app] legend {
+    font-weight: 400;
+}
+
+[property="documents"] {
+    grid-column: -1;
+}
