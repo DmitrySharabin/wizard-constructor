@@ -92,7 +92,7 @@ h2[property][mv-mode="edit"] {
 }
 
 /* Стилизация примечаний */
-[property="steps"]>[property="description"] {
+.description {
     padding: 5px 20px;
     border-left: 3px solid hsl(357, 45%, 59%);
 }

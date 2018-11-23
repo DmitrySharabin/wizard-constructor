@@ -70,7 +70,7 @@
             <p class="hidden">Текст в хлебных крошках</p>
             <p class="hidden" property="short_name" mv-default=" "></p>
             <p class="hidden">Примечание к шагу</p>
-            <p property="description" mv-plugins="tinymce" mv-default=" "></p>
+            <p class="[if(len(description) > 1, 'description', '')]" property="description" mv-plugins="tinymce" mv-default=" "></p>
             <p class="hidden">id документов</p>
             <p property="documents" mv-multiple mv-default=" " mv-initial-items="0"></p>
             <h4 class="hidden">Списки действий</h4>
@@ -80,7 +80,7 @@
                 <p class="hidden">Текст инструкции/пояснения к пунктам списка</p>
                 <p property="name" mv-plugins="tinymce" mv-default=" "></p>
                 <p class="hidden">Примечание к пунктам списка</p>
-                <p property="description" mv-plugins="tinymce" mv-default=" "></p>
+                <p class="[if(len(description) > 1, 'description', '')]" property="description" mv-plugins="tinymce" mv-default=" "></p>
                 <label class="hidden">
                     <input type="checkbox" property="multiple" checked>
                     <span>Множественный выбор</span>
