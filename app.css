@@ -4,6 +4,7 @@ html {
     padding: 0;
     margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 62.5%;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     background-color: #eee;
     color: #444;
     font-weight: 300;
+    font-size: 1.6em;
 }
 
 *,
@@ -67,6 +69,11 @@ summary {
     cursor: default;
 }
 
+.step-name {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
 /*
     Отображаются в режиме редактирования (исключаем метки, чтобы сохранить для них отображение grid)
 */
@@ -82,9 +89,62 @@ summary {
     margin: 5px;
 }
 
+.checkbox,
+.radio {
+    display: none;
+}
+
+.checkbox-custom,
+.radio-custom {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    border: 2px solid hsl(179, 74%, 36%);
+    border-radius: 3px;
+    position: relative;
+}
+
+.checkbox-custom,
+.radio-custom,
+.label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox:checked + .checkbox-custom::before,
+.radio:checked + .radio-custom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: hsl(179, 74%, 36%);
+    border-radius: 2px;
+}
+
+.radio-custom,
+.radio:checked+.radio-custom::before {
+    border-radius: 50%;
+}
+
+[property="checklists"] {
+    padding-bottom: 10px;
+    border-bottom: .1rem solid rgba(4,33,33,.15);
+}
+
 /* Стилизация редактируемых блоков */
-p[property][mv-mode="edit"],
-h2[property][mv-mode="edit"] {
+/* p[property][mv-mode="edit"],
+h2[property][mv-mode="edit"],
+div[property][mv-mode="edit"] {
+    border: 1px solid hsl(179, 74%, 36%);
+    border-radius: 3px;
+    background-color: #eee;
+    min-height: 50px;
+} */
+
+[property]:not(input) [mv-mode="edit"] {
     border: 1px solid hsl(179, 74%, 36%);
     border-radius: 3px;
     background-color: #eee;
@@ -92,9 +152,29 @@ h2[property][mv-mode="edit"] {
 }
 
 /* Стилизация примечаний */
-.description {
+.info-wrap {
+    position: relative;
+    border-left: .3rem solid transparent;
     padding: 5px 20px;
-    border-left: 3px solid hsl(357, 45%, 59%);
+    border-left-color: hsl(357, 45%, 59%);
+}
+
+.info-wrap__icon {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: -0.67rem;
+    top: 1.3rem;
+    width: 17px;
+    height: 17px;
+    background-color: white;
+}
+
+.info-wrap__icon .svg-icon {
+    vertical-align: top;
+    fill: hsl(357, 45%, 59%);
+    stroke: none;
+    display: inline-block;
 }
 
 .basic-parameters [property="description"] {
@@ -111,15 +191,18 @@ h2[property][mv-mode="edit"] {
 /* Стилизация инструкций к спискам */
 [property="checklists"] > p[property="name"] {
     font-weight: 500;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    border-bottom: .1rem solid rgba(4,33,33,.15);
 }
 
 /* Стилизация хлебных крошек */
 .breadcrumbs {
-    position: fixed;
+    /* position: fixed; */
     width: 300px;
     max-height: 400px;
     overflow: scroll;
-    left: 10px;
+    /* left: 10px; */
     background-color: #fff;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     padding: 10px;
@@ -159,4 +242,27 @@ h2[property][mv-mode="edit"] {
     background-color: hsl(179, 74%, 36%);
     color: white;
     text-align: center;
+}
+
+/* Стилизация панели инструментов */
+.mv-ui .mv-button {
+    font-size: 1.6em;
+}
+
+/* Стилизация кнопок добавления элементов визарда */
+button.mv-add {
+    background-color: hsl(179, 74%, 36%);
+    color: white;
+    border: .1rem solid hsl(179, 74%, 36%);
+    border-radius: 0.8rem;
+    padding: 7px;
+    margin: 10px 5px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease-out;
+}
+
+button.mv-add:hover {
+    background-color: hsl(202, 38%, 94%);
+    color: hsl(179, 74%, 36%);
 }

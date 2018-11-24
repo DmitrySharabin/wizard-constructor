@@ -21,7 +21,7 @@
         <h1>Конструктор визардов</h1>
     </header>
 
-    <main mv-app="wizardConstructor" mv-storage="local" mv-bar="import export edit save" mv-plugins="locale-ru" lang="ru">
+    <main mv-app="wizardConstructor" mv-storage="local" mv-bar="import export edit save" mv-plugins="locale-ru tinymce" lang="ru">
         <aside class="breadcrumbs">
             <h3>Хлебные крошки</h3>
             <ol>
@@ -66,11 +66,18 @@
             <p class="hidden">Номер шага</p>
             <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
             <p class="hidden">Содержание шага</p>
-            <p property="name" mv-default=" "></p>
+            <p property="name" mv-default=" " class="step-name"></p>
             <p class="hidden">Текст в хлебных крошках</p>
             <p class="hidden" property="short_name" mv-default=" "></p>
             <p class="hidden">Примечание к шагу</p>
-            <p class="[if(len(description) > 1, 'description', '')]" property="description" mv-plugins="tinymce" mv-default=" "></p>
+            <div class="[if(len(description) > 1, 'info-wrap', '')]">
+                <div class="[if(len(description) > 1, 'info-wrap__icon', '')]" style="display: [if(len(description) > 1, 'block', 'none')];">
+                    <svg version="1.1" viewBox="0 0 25 25" class="svg-icon">
+                        <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
+                    </svg>
+                </div>
+                <div property="description" class="tinymce" mv-default=" "></div>
+            </div>
             <p class="hidden">id документов</p>
             <p property="documents" mv-multiple mv-default=" " mv-initial-items="0"></p>
             <h4 class="hidden">Списки действий</h4>
@@ -78,9 +85,16 @@
                 <p class="hidden">id списка</p>
                 <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
                 <p class="hidden">Текст инструкции/пояснения к пунктам списка</p>
-                <p property="name" mv-plugins="tinymce" mv-default=" "></p>
+                <p property="name" mv-default=" "></p>
                 <p class="hidden">Примечание к пунктам списка</p>
-                <p class="[if(len(description) > 1, 'description', '')]" property="description" mv-plugins="tinymce" mv-default=" "></p>
+                <div class="[if(len(description) > 1, 'info-wrap', '')]">
+                    <div class="[if(len(description) > 1, 'info-wrap__icon', '')]" style="display: [if(len(description) > 1, 'block', 'none')];">
+                        <svg version="1.1" viewBox="0 0 25 25" class="svg-icon">
+                            <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
+                        </svg>
+                    </div>
+                    <div property="description" class="tinymce" mv-default=" "></div>
+                </div>
                 <label class="hidden">
                     <input type="checkbox" property="multiple" checked>
                     <span>Множественный выбор</span>
@@ -91,9 +105,10 @@
                 <section property="items" mv-multiple>
                     <p class="hidden">id пункта</p>
                     <p class="hidden" property="id" mv-default="[checklists.$index + 1].[$index + 1]" mv-mode="read"></p>
-                    <label class="list-items">
-                        <input type="[if(multiple, 'checkbox', 'radio')]" name="list-item">
-                        <p property="name" mv-plugins="tinymce" mv-default=" "></p>
+                    <label>
+                        <input type="[if(multiple, 'checkbox', 'radio')]" name="list-item" class="[if(multiple, 'checkbox', 'radio')]">
+                        <span class="[if(multiple, 'checkbox', 'radio')]-custom"></span>
+                        <span property="name" class="tinymce" mv-default=" " class="label"></span>
                     </label>
                     <p class="hidden">id документов</p>
                     <p property="documents" mv-multiple mv-initial-items="0"></p>
@@ -104,16 +119,16 @@
                 </section>
             </section>
             <p class="hidden">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
-            <p property="footer_description" mv-plugins="tinymce" mv-default=" "></p>
+            <div property="footer_description" class="tinymce" mv-default=" "></div>
         </details>
         <h3 class="hidden">Уведомление</h3>
         <section class="hidden" property="notification">
             <p class="hidden">Заголовок</p>
             <p property="title"></p>
             <p class="hidden">Основное содержание</p>
-            <p property="description" mv-plugins="tinymce"></p>
+            <div property="description" class="tinymce"></div>
             <p class="hidden">Пояснительный текст над кнопкой закрытия уведомления</p>
-            <p property="footer" mv-plugins="tinymce"></p>
+            <div property="footer" class="tinymce"></div>
             <p class="hidden">Текст на кнопке закрытия уведомления</p>
             <p property="button_text"></p>
         </section>
