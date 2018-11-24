@@ -2,142 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Dmitry Sharabin">
-    <meta name="keywords" content="Mavo">
-    <link rel="stylesheet" href="./app.css">
-    <!-- Roboto font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <!-- Mavo -->
-    <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
-    <script src="https://dev.mavo.io/dist/mavo.js"></script>
-    <title>Интерактивный рабочий блокнот | Конструктор визардов</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Dmitry Sharabin">
+  <meta name="keywords" content="Mavo">
+  <link rel="stylesheet" href="./app.css">
+  <!-- Roboto font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <!-- Mavo -->
+  <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+  <script src="https://dev.mavo.io/dist/mavo.js"></script>
+  <title>Интерактивный рабочий блокнот | Конструктор визардов</title>
 </head>
 
 <body>
-    <header>
-        <h1>Конструктор визардов</h1>
-    </header>
-
-    <main mv-app="wizardConstructor" mv-storage="local" mv-bar="import export edit save" mv-plugins="locale-ru tinymce" lang="ru">
-        <aside class="breadcrumbs">
-            <h3>Хлебные крошки</h3>
-            <ol>
-                <li mv-multiple mv-value="steps.short_name"></li>
-            </ol>
-        </aside>
+  <header>
+    <h1>Конструктор визардов</h1>
+  </header>
+  <main>
+    <div mv-app="wizardConstructor" mv-storage="local" mv-bar="import export edit save" mv-plugins="locale-ru tinymce" lang="ru">
+      <aside class="breadcrumbs">
+        <ol>
+          <li mv-multiple mv-value="steps.short_name"></li>
+        </ol>
+      </aside>
+      <section class="wizard">
         <section class="basic-parameters">
-            <h3 class="hidden">Базовые параметры</h3>
-            <p class="hidden">id задачи</p>
-            <p class="hidden" property="id" mv-default=" "></p>
-            <p class="hidden">Название</p>
-            <h2 property="name" mv-default=" "></h2>
-            <p class="hidden">Описание</p>
-            <p property="description" mv-default=" "></p>
-            <label class="hidden">
-                Тип
-                <select property="type">
-                    <option>wizard</option>
-                    <option>simple</option>
-                    <option>checklist</option>
-                </select>
-            </label>
+          <h3 class="hidden">Базовые параметры</h3>
+          <p class="hidden title">id задачи</p>
+          <p class="hidden" property="id" mv-default=" "></p>
+          <p class="hidden title">Название</p>
+          <h2 property="name" mv-default=" "></h2>
+          <p class="hidden title">Описание</p>
+          <p property="description" mv-default=" "></p>
+          <p class="hidden always-hidden title" property="type" mv-default="wizard" mv-mode="read"></p>
         </section>
         <h3 class="hidden">Параметры уведомления</h3>
         <section class="hidden" property="run_at" mv-multiple mv-initial-items="0">
-            <p class="hidden">Время</p>
-            <p type="text" property="at" mv-default="08:00"></p>
-            <label>
-                Оповещение <input type="checkbox" property="bell" checked>
-            </label>
+          <p class="hidden title">Время</p>
+          <p type="text" property="at" mv-default="08:00"></p>
+          <label>
+            <input type="checkbox" property="bell" checked>
+            <span>Оповещение</span>
+          </label>
         </section>
         <label class="hidden">
-            Режим работы
-            <select property="exec_mode">
-                <option>background</option>
-                <option>permanent</option>
-            </select>
+          Режим работы
+          <select property="exec_mode">
+            <option>background</option>
+            <option>permanent</option>
+          </select>
         </label>
         <h3 class="hidden">Шаги</h3>
-        <details property="steps" mv-multiple mv-initial-items="0">
-            <summary>Шаг [id]</summary>
-            <p class="hidden">Номер шага</p>
-            <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
-            <p class="hidden">Содержание шага</p>
-            <p property="name" mv-default=" " class="step-name"></p>
-            <p class="hidden">Текст в хлебных крошках</p>
-            <p class="hidden" property="short_name" mv-default=" "></p>
-            <p class="hidden">Примечание к шагу</p>
-            <div class="[if(len(description) > 1, 'info-wrap', '')]">
-                <div class="[if(len(description) > 1, 'info-wrap__icon', '')]" style="display: [if(len(description) > 1, 'block', 'none')];">
-                    <svg version="1.1" viewBox="0 0 25 25" class="svg-icon">
-                        <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
-                    </svg>
-                </div>
-                <div property="description" class="tinymce" mv-default=" "></div>
+        <div class="switch-buttons" mv-if="len(steps)>0">
+          <button onclick="document.querySelectorAll('details').forEach(d => d.open = false);">Свернуть все шаги</button>
+          <button onclick="document.querySelectorAll('details').forEach(d => d.open = true);">Развернуть все шаги</button>
+        </div>
+        <details property="steps" mv-multiple mv-initial-items="0" open>
+          <summary>Шаг [id]</summary>
+          <p class="hidden always-hidden title">Номер шага</p>
+          <p class="hidden always-hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
+          <p class="hidden title">Содержание шага</p>
+          <p property="name" mv-default=" " class="step-name"></p>
+          <p class="hidden title">Текст в хлебных крошках</p>
+          <p class="hidden" property="short_name" mv-default=" "></p>
+          <p class="hidden title">Примечание к шагу</p>
+          <div class="[if(len(description) > 1, 'info-wrap', '')]">
+            <div class="[if(len(description) > 1, 'info-wrap__icon', '')]" style="display: [if(len(description) > 1, 'block', 'none')];">
+              <svg version="1.1" viewBox="0 0 25 25" class="svg-icon">
+                <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
+              </svg>
             </div>
-            <p class="hidden">id документов</p>
-            <p property="documents" mv-multiple mv-default=" " mv-initial-items="0"></p>
-            <h4 class="hidden">Списки действий</h4>
-            <section property="checklists" mv-multiple mv-initial-items="0">
-                <p class="hidden">id списка</p>
-                <p class="hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
-                <p class="hidden">Текст инструкции/пояснения к пунктам списка</p>
-                <p property="name" mv-default=" "></p>
-                <p class="hidden">Примечание к пунктам списка</p>
-                <div class="[if(len(description) > 1, 'info-wrap', '')]">
-                    <div class="[if(len(description) > 1, 'info-wrap__icon', '')]" style="display: [if(len(description) > 1, 'block', 'none')];">
-                        <svg version="1.1" viewBox="0 0 25 25" class="svg-icon">
-                            <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
-                        </svg>
-                    </div>
-                    <div property="description" class="tinymce" mv-default=" "></div>
-                </div>
-                <label class="hidden">
-                    <input type="checkbox" property="multiple" checked>
-                    <span>Множественный выбор</span>
-                </label>
-                <p class="hidden">id документов</p>
-                <p property="documents" mv-multiple mv-initial-items="0"></p>
-                <h5 class="hidden">Пункты списка</h5>
-                <section property="items" mv-multiple>
-                    <p class="hidden">id пункта</p>
-                    <p class="hidden" property="id" mv-default="[checklists.$index + 1].[$index + 1]" mv-mode="read"></p>
-                    <label>
-                        <input type="[if(multiple, 'checkbox', 'radio')]" name="list-item" class="[if(multiple, 'checkbox', 'radio')]">
-                        <span class="[if(multiple, 'checkbox', 'radio')]-custom"></span>
-                        <span property="name" class="tinymce" mv-default=" " class="label"></span>
-                    </label>
-                    <p class="hidden">id документов</p>
-                    <p property="documents" mv-multiple mv-initial-items="0"></p>
-                    <label class="hidden">
-                        <input type="checkbox" property="required" checked>
-                        <span>Обязательный</span>
-                    </label>
-                </section>
+            <div property="description" class="tinymce" mv-default=" "></div>
+          </div>
+          <p class="hidden title">id документов</p>
+          <p property="documents" mv-multiple mv-default=" " mv-initial-items="0"></p>
+          <h4 class="hidden">Списки действий</h4>
+          <section property="checklists" mv-multiple mv-initial-items="0">
+            <p class="hidden always-hidden title">id списка</p>
+            <p class="hidden always-hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
+            <p class="hidden title">Текст инструкции/пояснения к пунктам списка</p>
+            <p property="name" class="list-instruction" mv-default=" "></p>
+            <p class="hidden title">Примечание к пунктам списка</p>
+            <div class="[if(len(description) > 1, 'info-wrap', '')]">
+              <div class="[if(len(description) > 1, 'info-wrap__icon', '')]" style="display: [if(len(description) > 1, 'block', 'none')];">
+                <svg version="1.1" viewBox="0 0 25 25" class="svg-icon">
+                  <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
+                </svg>
+              </div>
+              <div property="description" class="tinymce" mv-default=" "></div>
+            </div>
+            <label class="hidden">
+              <h5>Чек-лист/Ветвление</h5>
+              <input type="checkbox" property="multiple" checked>
+              <span>[if(multiple, 'Чек-лист', 'Ветвление')]</span>
+            </label>
+            <p class="hidden title">id документов</p>
+            <p property="documents" mv-multiple mv-initial-items="0"></p>
+            <h5 class="hidden">Пункты списка</h5>
+            <section property="items" mv-multiple>
+              <p class="hidden always-hidden title">id пункта</p>
+              <p class="hidden always-hidden" property="id" mv-default="[checklists.$index + 1].[$index + 1]" mv-mode="read"></p>
+              <label class="list-item">
+                <input type="[if(multiple, 'checkbox', 'radio')]" name="list-item" class="[if(multiple, 'checkbox', 'radio')]">
+                <span class="[if(multiple, 'checkbox', 'radio')]-custom"></span>
+                <div property="name" class="tinymce" mv-default=" " class="label"></div>
+              </label>
+              <p class="hidden title">id документов</p>
+              <p property="documents" mv-multiple mv-initial-items="0"></p>
+              <label class="hidden always-hidden">
+                <input type="checkbox" property="required" checked>
+                <span>Обязательный пункт</span>
+              </label>
             </section>
-            <p class="hidden">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
-            <div property="footer_description" class="tinymce" mv-default=" "></div>
+          </section>
+          <p class="hidden title">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
+          <div property="footer_description" class="[if(len(footer_description) > 1, 'footer-description', '')]" mv-default=" "></div>
         </details>
         <h3 class="hidden">Уведомление</h3>
         <section class="hidden" property="notification">
-            <p class="hidden">Заголовок</p>
-            <p property="title"></p>
-            <p class="hidden">Основное содержание</p>
-            <div property="description" class="tinymce"></div>
-            <p class="hidden">Пояснительный текст над кнопкой закрытия уведомления</p>
-            <div property="footer" class="tinymce"></div>
-            <p class="hidden">Текст на кнопке закрытия уведомления</p>
-            <p property="button_text"></p>
+          <p class="hidden title">Заголовок</p>
+          <p property="title"></p>
+          <p class="hidden title">Основное содержание</p>
+          <div property="description" class="tinymce"></div>
+          <p class="hidden title">Пояснительный текст над кнопкой закрытия уведомления</p>
+          <div property="footer"></div>
+          <p class="hidden title">Текст на кнопке закрытия уведомления</p>
+          <p property="button_text"></p>
         </section>
-    </main>
-
-    <footer>
-        <p>
-            Сделано с ♥︎ <a href="https://d12n.me/" target="_blank">Дмитрием Шарабиным</a> с помощью <a href="https://mavo.io/"
-                target="_blank">Mavo</a>.
-        </p>
-    </footer>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Сделано с ♥︎ <a href="https://d12n.me/" target="_blank">Дмитрием Шарабиным</a> с помощью <a href="https://mavo.io/"
+        target="_blank">Mavo</a>.
+    </p>
+  </footer>
 </body>

@@ -1,32 +1,36 @@
+ /* Базовые цвета */
+ :root {
+    --main-color: hsl(179, 74%, 36%);
+    --description-color: hsl(357, 45%, 59%);
+    --text-color: #444;
+    --bg-color: #eee;
+    --line-color: rgba(4,33,33,.15);
+    --contrast-color: white;
+    --hover-color: hsl(202, 38%, 94%);
+}
+
+/* Базовые настройки */
 html {
     width: 100%;
     height: 100%;
-    padding: 0;
-    margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
-    font-size: 62.5%;
 }
 
 body {
+    display: grid;
+    grid-row-gap: 30px;
     box-sizing: border-box;
-    background-color: #eee;
-    color: #444;
+    background-color: var(--bg-color, inherit);
+    color: var(--text-color, inherit);
     font-weight: 300;
-    font-size: 1.6em;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-}
-
-header h1,
-footer {
+    padding: 0;
     margin: 0;
-    padding: 20px;
-    background-color: hsl(179, 74%, 36%);
-    color: white;
 }
 
 h1,
@@ -36,6 +40,15 @@ h4,
 h5,
 h6 {
     font-weight: 500;
+    margin: 10px;
+}
+
+/* Стилизация шапки и подвала */
+header,
+footer {
+    padding: 20px;
+    background-color: var(--main-color, inherit);
+    color: var(--contrast-color, inherit);
 }
 
 footer {
@@ -43,52 +56,97 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: var(--contrast-color, inherit);
     font-weight: 500;
 }
 
-[mv-app] {
-    background-color: #fff;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    width: 810px;
-    margin: 50px auto;
-    padding: 30px;
+/* Стилизация основной части страницы */
+main {
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) 1000px minmax(50px, 1fr);
 }
 
-/* Скрытые в режиме просмотра элементы */
-.hidden {
+/* Стилизация приложения */
+[mv-app] {
+    grid-column: 2;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background-color: var(--contrast-color, inherit);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.basic-parameters [property=description] {
+    padding: 10px;
+    margin: 10px;
+    font-style: italic;
+}
+
+/* Скрываем ненужные элементы в режиме просмотра */
+.hidden:not([mv-mode=edit]) {
     display: none;
 }
 
+/* И отображаем их в режиме редактирования */
+[mv-mode=edit] .hidden:not(.always-hidden) {
+    display: block;
+}
+
 /* Стилизация блоков с шагами визарда */
-[property="steps"] {
+[property=steps] {
     margin: 10px;
 }
 
 summary {
+    color: var(--main-color, inherit);
+    font-weight: 500;
+    font-size: 18px;
     cursor: default;
 }
 
 .step-name {
+    margin: 10px;
+    padding: 10px;
     font-size: 1.25em;
     font-weight: 400;
 }
 
-/*
-    Отображаются в режиме редактирования (исключаем метки, чтобы сохранить для них отображение grid)
-*/
-[mv-app][mv-mode="edit"] .hidden:not(.list-items) {
-    display: block;
+/* Стилизация примечаний */
+.info-wrap {
+    position: relative;
+    border-left: .3rem solid transparent;
+    padding: 10px 20px;
+    margin: 10px;
+    border-left-color: var(--description-color, inherit);
 }
 
-/* Стилизуем элементы списков в шагах */
-[property="checklists"] .list-items:not(.hidden) {
-    display: grid;
-    grid-template-columns: 30px 1fr;
-    align-items: center;
-    margin: 5px;
+.info-wrap__icon {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: -0.65rem;
+    top: 1.3rem;
+    width: 17px;
+    height: 17px;
+    background-color: var(--contrast-color, inherit);
 }
 
+.info-wrap__icon .svg-icon {
+    vertical-align: top;
+    fill: var(--description-color, inherit);
+    stroke: none;
+    display: inline-block;
+}
+
+/* Стилизация документов */
+[property=documents]:not([mv-mode=edit]) {
+    padding: 10px;
+    margin: 10px;
+    border-left: 3px solid var(--main-color, inherit);
+    border-radius: 10px;
+}
+
+/* Стилизация списков */
 .checkbox,
 .radio {
     display: none;
@@ -99,7 +157,7 @@ summary {
     width: 25px;
     height: 25px;
     margin: 0 10px;
-    border: 2px solid hsl(179, 74%, 36%);
+    border: 2px solid var(--main-color, inherit);
     border-radius: 3px;
     position: relative;
 }
@@ -120,7 +178,7 @@ summary {
     right: 2px;
     bottom: 2px;
     left: 2px;
-    background: hsl(179, 74%, 36%);
+    background: var(--main-color, inherit);
     border-radius: 2px;
 }
 
@@ -129,97 +187,50 @@ summary {
     border-radius: 50%;
 }
 
-[property="checklists"] {
-    padding-bottom: 10px;
-    border-bottom: .1rem solid rgba(4,33,33,.15);
+.list-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    margin: 20px 0;
 }
 
-/* Стилизация редактируемых блоков */
-/* p[property][mv-mode="edit"],
-h2[property][mv-mode="edit"],
-div[property][mv-mode="edit"] {
-    border: 1px solid hsl(179, 74%, 36%);
-    border-radius: 3px;
-    background-color: #eee;
-    min-height: 50px;
-} */
-
-[property]:not(input) [mv-mode="edit"] {
-    border: 1px solid hsl(179, 74%, 36%);
-    border-radius: 3px;
-    background-color: #eee;
-    min-height: 50px;
+/* Стилизация границ списка сверху и снизу */
+[property=checklists]:not([mv-mode=edit]),
+.list-instruction:not([mv-mode=edit]) {
+    border-bottom: .1rem solid var(--line-color, inherit);
 }
 
-/* Стилизация примечаний */
-.info-wrap {
-    position: relative;
-    border-left: .3rem solid transparent;
-    padding: 5px 20px;
-    border-left-color: hsl(357, 45%, 59%);
-}
-
-.info-wrap__icon {
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left: -0.67rem;
-    top: 1.3rem;
-    width: 17px;
-    height: 17px;
-    background-color: white;
-}
-
-.info-wrap__icon .svg-icon {
-    vertical-align: top;
-    fill: hsl(357, 45%, 59%);
-    stroke: none;
-    display: inline-block;
-}
-
-.basic-parameters [property="description"] {
-    font-style: italic;
-}
-
-/* Стилизация документов */
-[property="documents"] {
-    padding: 10px;
-    border-left: 3px solid hsl(179, 74%, 36%);
-    border-radius: 10px;
-}
-
-/* Стилизация инструкций к спискам */
-[property="checklists"] > p[property="name"] {
+/* Стилизация инструкции к элементам списка */
+.list-instruction {
+    padding: 20px 10px 10px;
     font-weight: 500;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-    border-bottom: .1rem solid rgba(4,33,33,.15);
+}
+
+/* Стилизация инструкций к переходу на след. шаг/завершению визарда */
+[property=footer_description] {
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer-description:not([mv-mode=edit])::after {
+    content: 'Следующий шаг/Завершить';
+    display: block;
+    width: 200px;
+    text-align: center;
+    background-color: var(--main-color, inherit);
+    color: var(--contrast-color, inherit);
+    border: .1rem solid var(--main-color, inherit);
+    border-radius: 0.8rem;
+    padding: 7px;
+    margin: 10px 5px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 /* Стилизация хлебных крошек */
-.breadcrumbs {
-    /* position: fixed; */
-    width: 300px;
-    max-height: 400px;
-    overflow: scroll;
-    /* left: 10px; */
-    background-color: #fff;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    padding: 10px;
-    z-index: 100;
-}
-
-.breadcrumbs h3 {
-    margin: 0;
-    padding: 10px;
-    background-color: hsl(179, 74%, 36%);
-    color: white;
-}
-
 .breadcrumbs ol {
     list-style-type: none;
     counter-reset: num;
-    padding: 0;
+    padding: 10px;
 }
 
 .breadcrumbs ol li {
@@ -237,23 +248,45 @@ div[property][mv-mode="edit"] {
     width: 2em;
     height: 2em;
     line-height: 1.5em;
-    border: 4px double white;
+    border: 4px double var(--contrast-color, inherit);
     border-radius: 50%;
-    background-color: hsl(179, 74%, 36%);
-    color: white;
+    background-color: var(--main-color, inherit);
+    color: var(--contrast-color, inherit);
     text-align: center;
 }
 
+/* Стилизация заголовков разделов в режиме редактирования */
+.wizard h3,
+.wizard h4,
+.wizard h5 {
+    color: var(--description-color, inherit);
+}
+
+/* Стилизация заголовков блоков в режиме редактирования */
+.title {
+    margin: 10px;
+    font-style: italic;
+    color: var(--main-color, inherit);
+}
+
+/* Стилизация редактируемых блоков */
+[property]:not(select)[mv-mode=edit] {
+    border: 1px solid var(--main-color, inherit);
+    min-height: 50px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
 /* Стилизация панели инструментов */
-.mv-ui .mv-button {
-    font-size: 1.6em;
+.mv-bar.mv-ui:not(.mv-fixed) {
+    grid-column: 1 / span 2;
 }
 
 /* Стилизация кнопок добавления элементов визарда */
 button.mv-add {
-    background-color: hsl(179, 74%, 36%);
-    color: white;
-    border: .1rem solid hsl(179, 74%, 36%);
+    background-color: var(--main-color, inherit);
+    color: var(--contrast-color, inherit);
+    border: .1rem solid var(--main-color, inherit);
     border-radius: 0.8rem;
     padding: 7px;
     margin: 10px 5px;
@@ -263,6 +296,34 @@ button.mv-add {
 }
 
 button.mv-add:hover {
-    background-color: hsl(202, 38%, 94%);
-    color: hsl(179, 74%, 36%);
+    background-color: var(--hover-color, inherit);
+    color: var(--main-color, inherit);
+}
+
+/* Стилизация кнопок, разворачивающих/сворачивающих шаги */
+.switch-buttons {
+    padding: 5px;
+}
+
+.switch-buttons button {
+    padding: 8px;
+    margin: 8px;
+}
+
+/* Стилизация визуального редактора */
+.tinymce ul {
+    padding-left: 30px;
+    list-style-type: none;
+}
+
+.tinymce li {
+    position: relative;
+}
+
+.tinymce li::before {
+    position: absolute;
+    left: -30px;
+    content: '—';
+    display: inline-block;
+    padding: 0 5px;
 }
