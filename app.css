@@ -310,6 +310,13 @@ button.mv-add:hover {
     margin: 8px;
 }
 
+/* Стилизация кнопок перемещения шагов */
+.move-button {
+    font-size: 15px;
+    width: 25px;
+    margin: 5px;
+}
+
 /* Стилизация визуального редактора */
 .tinymce ul {
     padding-left: 30px;
