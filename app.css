@@ -311,16 +311,13 @@ button.mv-add:hover {
 }
 
 /* Стилизация кнопок перемещения и дублирования шагов */
-.move-button {
-    font-size: 15px;
-    width: 25px;
-    margin: 5px;
-    padding: 5px;
+.steps-adjust-buttons {
+    display: flex;
 }
 
+.move-button,
 .clone-button {
     font-size: 13px;
-    height: 21px;
     margin: 5px;
     padding: 5px;
 }
