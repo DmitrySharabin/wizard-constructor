@@ -135,7 +135,7 @@ summary {
     vertical-align: top;
     fill: var(--description-color, inherit);
     stroke: none;
-    display: inline-block;
+    display: inline-block !important;
 }
 
 /* Стилизация документов */
