@@ -56,7 +56,7 @@
         </label>
         <h3 class="hidden">Шаги</h3>
         <meta property="numOfSteps" content="[count(steps)]">
-        <div class="switch-buttons" mv-if="numOfSteps > 0">
+        <div class="switch-buttons" style="display: [if(numOfSteps > 0, 'block')];">
           <button onclick="document.querySelectorAll('details').forEach(d => d.open = false);">Свернуть все шаги</button>
           <button onclick="document.querySelectorAll('details').forEach(d => d.open = true);">Развернуть все шаги</button>
         </div>

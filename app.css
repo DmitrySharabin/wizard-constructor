@@ -303,6 +303,7 @@ button.mv-add:hover {
 /* Стилизация кнопок, разворачивающих/сворачивающих шаги */
 .switch-buttons {
     padding: 5px;
+    display: none;
 }
 
 .switch-buttons button {
