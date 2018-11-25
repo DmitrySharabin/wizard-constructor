@@ -129,13 +129,22 @@
         <h3 class="hidden">Уведомление</h3>
         <section class="hidden" property="notification">
           <p class="hidden title">Заголовок</p>
-          <p property="title"></p>
+          <p property="title" mv-default=" "></p>
           <p class="hidden title">Основное содержание</p>
-          <div property="description" class="tinymce"></div>
+          <div property="description" class="tinymce" mv-default=" "></div>
           <p class="hidden title">Пояснительный текст над кнопкой закрытия уведомления</p>
-          <p property="footer"></p>
+          <p property="footer" mv-default=" "></p>
           <p class="hidden title">Текст на кнопке закрытия уведомления</p>
-          <p property="button_text"></p>
+          <p property="button_text" mv-default=" "></p>
+          <h4>Иконка в уведомлении</h4>
+          <section property="icon">
+            <p class="title">Название (первая часть имени файла)</p>
+            <p property="name" mv-default=" "></p>
+            <p class="title">Размер (вторая часть имени файла)</p>
+            <p property="size" mv-default=" "></p>
+            <p class="title">Расширение (тип файла)</p>
+            <p property="ext" mv-default=" "></p>
+          </section>
         </section>
       </section>
     </div>
