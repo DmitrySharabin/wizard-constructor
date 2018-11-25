@@ -65,7 +65,7 @@
           <div class="steps-adjust-buttons">
             <button class="move-button" mv-if="$index > 0" mv-action="set(id, $index), move(steps, $index - 1), set(id, $index + 1)" title="Переместить вверх">⬆︎</button>
             <button class="move-button" mv-if="numOfSteps - 1 > $index" mv-action="set(id, $index + 2), move(steps, $index + 2)" title="Переместить вниз">⬇︎</button>
-            <button class="clone-button" mv-action="add(steps, steps, $index)" title="Дублировать">Дублировать</button>
+            <button class="clone-button" mv-action="add(steps, steps, $index)" title="Дублировать шаг">Дублировать</button>
           </div>
           <p class="hidden always-hidden title">Номер шага</p>
           <p class="hidden always-hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
