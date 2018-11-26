@@ -273,7 +273,7 @@ summary {
 [property]:not(select):not(input)[mv-mode=edit] {
     border: 1px solid var(--main-color, inherit);
     min-height: 50px;
-    margin: 5px 10px;
+    margin: 0 10px 5px 10px;
     padding: 10px;
 }
 
