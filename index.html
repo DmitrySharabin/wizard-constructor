@@ -117,9 +117,9 @@
               </label>
               <p class="hidden title">id документов</p>
               <p property="documents" mv-multiple mv-initial-items="0"></p>
-              <label class="hidden always-hidden">
+              <label class="hidden">
                 <input type="checkbox" property="required" checked>
-                <span>Обязательный пункт</span>
+                <span>[if(required, 'Обязательный', 'Необязательный')] пункт</span>
               </label>
             </section>
           </section>
