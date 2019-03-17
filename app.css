@@ -280,6 +280,21 @@ summary {
     padding: 10px;
 }
 
+/* Стилизация раздела с иконкой + предпросмотр иконки */
+[property="icon"] {
+    position: relative;
+}
+
+[property="icon"] img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    width: 7em;
+    max-height: 80%;
+}
+
 /* Стилизация панели инструментов */
 .mv-bar.mv-ui:not(.mv-fixed) {
     grid-column: 1 / span 2;

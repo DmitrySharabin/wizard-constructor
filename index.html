@@ -139,11 +139,24 @@
           <h4>Иконка в уведомлении</h4>
           <section property="icon">
             <p class="title">Название (первая часть имени файла)</p>
-            <p property="name" mv-default=" "></p>
+            <select property="name">
+              <option value="alert">Предупреждение</option>
+              <option value="pen">Сбор сведений</option>
+              <option value="phone">Передача сведений</option>
+              <option value="time">Время</option>
+            </select>
             <p class="title">Размер (вторая часть имени файла)</p>
-            <p property="size" mv-default=" "></p>
+            <select property="size">
+              <option value="small">По пояс</option>
+              <option value="big">В полный рост</option>
+            </select>
             <p class="title">Расширение (тип файла)</p>
-            <p property="ext" mv-default=" "></p>
+            <select property="ext">
+              <option value="svg">*.svg</option>
+              <option value="png">*.png</option>
+              <option value="jpg">*.jpg</option>
+            </select>
+            <img src="./images/[name & '_' & size & '.' & ext]" alt="">
           </section>
         </section>
       </section>
