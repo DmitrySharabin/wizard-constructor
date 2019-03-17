@@ -126,8 +126,11 @@
           <p class="hidden title">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
           <p property="footer_description" class="[if(len(footer_description) > 1, 'footer-description', '')]" mv-default=" "></p>
         </details>
-        <h3 class="hidden">Уведомление</h3>
-        <section class="hidden" property="notification">
+        <label class="hidden">
+          <input type="checkbox" property="notificationNeeded" mv-storage="none"> Уведомление?
+        </label>
+        <h3 class="hidden" mv-if="notificationNeeded">Уведомление</h3>
+        <section class="hidden" property="notification" mv-if="notificationNeeded">
           <p class="hidden title">Заголовок</p>
           <p property="title" mv-default=" "></p>
           <p class="hidden title">Основное содержание</p>
@@ -139,24 +142,27 @@
           <h4>Иконка в уведомлении</h4>
           <section property="icon">
             <p class="title">Название (первая часть имени файла)</p>
-            <select property="name">
+            <select property="name" mv-default=" ">
+              <option value=" ">--Выберите из списка--</option>
               <option value="alert">Предупреждение</option>
               <option value="pen">Сбор сведений</option>
               <option value="phone">Передача сведений</option>
               <option value="time">Время</option>
             </select>
             <p class="title">Размер (вторая часть имени файла)</p>
-            <select property="size">
+            <select property="size" mv-default=" ">
+              <option value=" ">--Выберите из списка--</option>
               <option value="small">По пояс</option>
               <option value="big">В полный рост</option>
             </select>
             <p class="title">Расширение (тип файла)</p>
-            <select property="ext">
+            <select property="ext" mv-default=" ">
+              <option value=" ">--Выберите из списка--</option>
               <option value="svg">*.svg</option>
               <option value="png">*.png</option>
               <option value="jpg">*.jpg</option>
             </select>
-            <img src="./images/[name & '_' & size & '.' & ext]" alt="">
+            <img src="./images/[name & '_' & size & '.' & ext]" alt="Образец иконки">
           </section>
         </section>
       </section>
