@@ -19,6 +19,9 @@ html {
 body {
     display: grid;
     grid-row-gap: 30px;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+    height: 100vh;
     box-sizing: border-box;
     background-color: var(--bg-color, inherit);
     color: var(--text-color, inherit);
@@ -275,6 +278,26 @@ summary {
     min-height: 50px;
     margin: 0 10px 5px 10px;
     padding: 10px;
+}
+
+/* Стилизация раздела с иконкой + предпросмотр иконки */
+[property="icon"] {
+    position: relative;
+}
+
+[property="icon"] img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    width: 7em;
+    max-height: 80%;
+}
+
+[property="icon"] img:not([src]),
+[property="icon"] img[src=""] {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" fill="%23666"><circle cx="50" cy="40" r="22" /><circle cx="50" cy="110" r="50" /></svg>');
 }
 
 /* Стилизация панели инструментов */
