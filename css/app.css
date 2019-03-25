@@ -295,6 +295,11 @@ summary {
     max-height: 80%;
 }
 
+[property="icon"] img:not([src]),
+[property="icon"] img[src=""] {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" fill="%23666"><circle cx="50" cy="40" r="22" /><circle cx="50" cy="110" r="50" /></svg>');
+}
+
 /* Стилизация панели инструментов */
 .mv-bar.mv-ui:not(.mv-fixed) {
     grid-column: 1 / span 2;

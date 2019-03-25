@@ -163,7 +163,7 @@
               <option value="png">*.png</option>
               <option value="jpg">*.jpg</option>
             </select>
-            <img src="./images/[name & '_' & size & '.' & ext]" alt="Образец иконки">
+            <img src="[if(name != ' ' and size!= ' ' and ext != ' ', '/images/' & name & '_' & size & '.' & ext)]" alt="Образец иконки">
           </section>
         </section>
       </section>
