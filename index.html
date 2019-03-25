@@ -7,12 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Dmitry Sharabin">
   <meta name="keywords" content="Mavo">
-  <link rel="stylesheet" href="./app.css">
+  <link rel="stylesheet" href="css/app.css">
   <!-- Roboto font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <!-- Mavo -->
-  <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
-  <script src="https://dev.mavo.io/dist/mavo.min.js"></script>
+  <link rel="stylesheet" href="css/mavo.css">
+  <script src="js/mavo.min.js"></script>
+  <!-- Mavo Plugins -->
+  <script src="js/mavo-locale-ru.js"></script>
+  <script src="js/mavo-tinymce.js"></script>
+  <script src="js/mavo-clear.js"></script>
   <title>Интерактивный рабочий блокнот | Конструктор визардов</title>
 </head>
 
@@ -126,11 +130,8 @@
           <p class="hidden title">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
           <p property="footer_description" class="[if(len(footer_description) > 1, 'footer-description', '')]" mv-default=" "></p>
         </details>
-        <label class="hidden">
-          <input type="checkbox" property="notificationNeeded" mv-storage="none"> Уведомление?
-        </label>
-        <h3 class="hidden" mv-if="notificationNeeded">Уведомление</h3>
-        <section class="hidden" property="notification" mv-if="notificationNeeded">
+        <h3 class="hidden">Уведомление</h3>
+        <section class="hidden" property="notification">
           <p class="hidden title">Заголовок</p>
           <p property="title" mv-default=" "></p>
           <p class="hidden title">Основное содержание</p>
