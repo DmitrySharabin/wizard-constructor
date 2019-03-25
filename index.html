@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Dmitry Sharabin">
   <meta name="keywords" content="Mavo">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="./css/app.css">
   <!-- Roboto font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <!-- Mavo -->
-  <link rel="stylesheet" href="css/mavo.css">
-  <script src="js/mavo.min.js"></script>
+  <link rel="stylesheet" href="./css/mavo.css">
+  <script src="./js/mavo.min.js"></script>
   <!-- Mavo Plugins -->
-  <script src="js/mavo-locale-ru.js"></script>
-  <script src="js/mavo-tinymce.js"></script>
-  <script src="js/mavo-clear.js"></script>
+  <script src="./js/mavo-locale-ru.js"></script>
+  <script src="./js/mavo-tinymce.js"></script>
+  <script src="./js/mavo-clear.js"></script>
   <title>Интерактивный рабочий блокнот | Конструктор визардов</title>
 </head>
 
@@ -163,7 +163,7 @@
               <option value="png">*.png</option>
               <option value="jpg">*.jpg</option>
             </select>
-            <img src="[if(name != ' ' and size!= ' ' and ext != ' ', '/images/' & name & '_' & size & '.' & ext)]" alt="Образец иконки">
+            <img src="[if(name != ' ' and size!= ' ' and ext != ' ', './images/' & name & '_' & size & '.' & ext)]" alt="Образец иконки">
           </section>
         </section>
       </section>
