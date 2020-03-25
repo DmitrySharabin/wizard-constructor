@@ -169,7 +169,7 @@ button.mv-close {
 [mv-app][mv-permissions~="logout"] .mv-logged-out {
   display: none; }
 
-[mv-progress="Loading"] [mv-multiple] {
+[mv-progress="Loading"]:not(.mv-no-hiding-during-loading) [mv-multiple] {
   display: none; }
 
 [mv-progress]::after {
@@ -576,14 +576,14 @@ time[property][aria-label][mv-mode="edit"].mv-empty::before {
     margin-bottom: auto; }
   .mv-bar.mv-ui.mv-compact .mv-status > span {
     display: none; }
-  .mv-bar.mv-ui.mv-tiny > button:not(.mv-login),
-  .mv-bar.mv-ui.mv-tiny > .mv-button:not(.mv-login) {
+  .mv-bar.mv-ui.mv-tiny > button,
+  .mv-bar.mv-ui.mv-tiny > .mv-button {
     width: 1em;
     position: relative;
     overflow: hidden;
     text-indent: -999em; }
-    .mv-bar.mv-ui.mv-tiny > button:not(.mv-login)::before,
-    .mv-bar.mv-ui.mv-tiny > .mv-button:not(.mv-login)::before {
+    .mv-bar.mv-ui.mv-tiny > button::before,
+    .mv-bar.mv-ui.mv-tiny > .mv-button::before {
       position: absolute;
       top: 50%;
       left: 50%;
