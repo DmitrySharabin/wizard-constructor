@@ -290,6 +290,11 @@ time[property][mv-mode="edit"] {
 	display: block;
 }
 
+/* Убираем ненужную тень: редактируемые блоки имею рамку */
+[mv-app][mv-mode="edit"] [property] .mv-editor:focus {
+	box-shadow: none !important;
+}
+
 /* Стилизация раздела с иконкой + предпросмотр иконки */
 [property="icon"] {
 	position: relative;
