@@ -286,6 +286,10 @@ summary {
 	padding: 10px;
 }
 
+time[property][mv-mode="edit"] {
+	display: block;
+}
+
 /* Стилизация раздела с иконкой + предпросмотр иконки */
 [property="icon"] {
 	position: relative;
