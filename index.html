@@ -91,14 +91,11 @@
 
 					<h3 class="hidden">Шаги</h3>
 					<meta property="numOfSteps" content="[count(steps)]" />
-					<div
-						class="switch-buttons"
-						style="display: [if(numOfSteps > 0, 'block')];"
-					>
-						<button mv-action="set(open.$all, false)">
+					<div class="switch-buttons" hidden="[numOfSteps <= 0]">
+						<button mv-action="set(open, false)">
 							Свернуть все шаги
 						</button>
-						<button mv-action="set(open.$all, true)">
+						<button mv-action="set(open, true)">
 							Развернуть все шаги
 						</button>
 					</div>
