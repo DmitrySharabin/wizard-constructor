@@ -95,19 +95,21 @@
 						class="switch-buttons"
 						style="display: [if(numOfSteps > 0, 'block')];"
 					>
-						<button
-							onclick="document.querySelectorAll('details').forEach(d => d.open = false);"
-						>
+						<button mv-action="set(open.$all, false)">
 							Свернуть все шаги
 						</button>
-						<button
-							onclick="document.querySelectorAll('details').forEach(d => d.open = true);"
-						>
+						<button mv-action="set(open.$all, true)">
 							Развернуть все шаги
 						</button>
 					</div>
 
-					<details property="steps" mv-multiple mv-initial-items="0" open>
+					<details
+						property="steps"
+						mv-multiple
+						mv-initial-items="0"
+						open="[open]"
+					>
+						<meta property="open" mv-default="true" />
 						<summary>Шаг [id]</summary>
 						<div class="steps-adjust-buttons">
 							<button

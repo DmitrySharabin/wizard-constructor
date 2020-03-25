@@ -115,6 +115,11 @@ summary {
 	font-weight: 400;
 }
 
+/* Скрываем свойство open — оно используется в служебных целях. Пользователь не должен его менять. */
+[mv-app][mv-mode="edit"] [property="open"] {
+	display: none;
+}
+
 /* Стилизация примечаний */
 .info-wrap {
 	position: relative;
