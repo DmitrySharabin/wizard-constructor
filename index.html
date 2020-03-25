@@ -1,178 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Dmitry Sharabin" />
+		<meta name="keywords" content="Mavo" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="Dmitry Sharabin">
-  <meta name="keywords" content="Mavo">
-  <link rel="stylesheet" href="css/app.css">
-  <!-- Roboto font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <!-- Mavo -->
-  <link rel="stylesheet" href="css/mavo.css">
-  <script src="js/mavo.min.js"></script>
-  <!-- Mavo Plugins -->
-  <script src="js/mavo-locale-ru.js"></script>
-  <script src="js/mavo-tinymce.js"></script>
-  <script src="js/mavo-clear.js"></script>
-  <title>Интерактивный рабочий блокнот | Конструктор визардов</title>
-</head>
+		<link rel="stylesheet" href="css/app.css" />
 
-<body>
-  <header>
-    <h1>Конструктор визардов</h1>
-  </header>
-  <main>
-    <div mv-app="wizardConstructor" mv-storage="local" mv-bar="import export edit save clear" lang="ru">
-      <aside class="breadcrumbs">
-        <ol>
-          <li mv-multiple mv-value="steps.short_name"></li>
-        </ol>
-      </aside>
-      <section class="wizard">
-        <section class="basic-parameters">
-          <h3 class="hidden">Базовые параметры</h3>
-          <p class="hidden title">id задачи</p>
-          <p class="hidden" property="id" mv-default=" "></p>
-          <p class="hidden title">Название</p>
-          <h2 property="name" mv-default=" "></h2>
-          <p class="hidden title">Описание</p>
-          <p property="description" mv-default=" "></p>
-          <p class="hidden always-hidden title" property="type" mv-default="wizard" mv-mode="read"></p>
-        </section>
-        <h3 class="hidden">Параметры уведомления</h3>
-        <section class="hidden" property="run_at" mv-multiple mv-initial-items="0">
-          <p class="hidden title">Время</p>
-          <p type="text" property="at" mv-default="08:00"></p>
-          <label>
-            <input type="checkbox" property="bell" checked>
-            <span>Оповещение</span>
-          </label>
-        </section>
-        <label class="hidden">
-          Режим работы
-          <select property="exec_mode">
-            <option value="background">с фоновым режимом</option>
-            <option value="permanent">непрерывный</option>
-          </select>
-        </label>
-        <h3 class="hidden">Шаги</h3>
-        <meta property="numOfSteps" content="[count(steps)]">
-        <div class="switch-buttons" style="display: [if(numOfSteps > 0, 'block')];">
-          <button onclick="document.querySelectorAll('details').forEach(d => d.open = false);">Свернуть все шаги</button>
-          <button onclick="document.querySelectorAll('details').forEach(d => d.open = true);">Развернуть все шаги</button>
-        </div>
-        <details property="steps" mv-multiple mv-initial-items="0" open>
-          <summary>Шаг [id]</summary>
-          <div class="steps-adjust-buttons">
-            <button class="move-button" mv-if="$index > 0" mv-action="set(id, $index), move(steps, $index - 1), set(id, $index + 1)" title="Переместить вверх">⬆︎</button>
-            <button class="move-button" mv-if="numOfSteps - 1 > $index" mv-action="set(id, $index + 2), move(steps, $index + 2)" title="Переместить вниз">⬇︎</button>
-            <button class="clone-button" mv-action="add(steps, steps, $index)" title="Дублировать шаг">Дублировать</button>
-          </div>
-          <p class="hidden always-hidden title">Номер шага</p>
-          <p class="hidden always-hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
-          <p class="hidden title">Содержание шага</p>
-          <p property="name" mv-default=" " class="step-name"></p>
-          <p class="hidden title">Текст в хлебных крошках</p>
-          <p class="hidden" property="short_name" mv-default=" "></p>
-          <p class="hidden title">Примечание к шагу</p>
-          <div class="[if(len(description) > 1, 'info-wrap', '')]">
-            <div class="[if(len(description) > 1, 'info-wrap__icon', '')]">
-              <svg version="1.1" viewBox="0 0 25 25" class="svg-icon" style="display: none;" width="17" height="17">
-                <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
-              </svg>
-            </div>
-            <div property="description" class="tinymce" mv-default=" "></div>
-          </div>
-          <p class="hidden title">id документов</p>
-          <p property="documents" mv-multiple mv-default=" " mv-initial-items="0"></p>
-          <h4 class="hidden">Списки действий</h4>
-          <section property="checklists" mv-multiple mv-initial-items="0">
-            <p class="hidden always-hidden title">id списка</p>
-            <p class="hidden always-hidden" property="id" mv-default="[$index + 1]" mv-mode="read"></p>
-            <p class="hidden title">Текст инструкции/пояснения к пунктам списка</p>
-            <p property="name" class="list-instruction" mv-default=" "></p>
-            <p class="hidden title">Примечание к пунктам списка</p>
-            <div class="[if(len(description) > 1, 'info-wrap', '')]">
-              <div class="[if(len(description) > 1, 'info-wrap__icon', '')]">
-                <svg version="1.1" viewBox="0 0 25 25" class="svg-icon" style="display: none;" width="17" height="17">
-                  <path fill="#c5676cб" stroke="none" pid="0" d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"></path>
-                </svg>
-              </div>
-              <div property="description" class="tinymce" mv-default=" "></div>
-            </div>
-            <label class="hidden">
-              <h5>Чек-лист/Ветвление</h5>
-              <input type="checkbox" property="multiple" checked>
-              <span>[if(multiple, 'Чек-лист', 'Ветвление')]</span>
-            </label>
-            <p class="hidden title">id документов</p>
-            <p property="documents" mv-multiple mv-initial-items="0"></p>
-            <h5 class="hidden">Пункты списка</h5>
-            <section property="items" mv-multiple>
-              <p class="hidden always-hidden title">id пункта</p>
-              <p class="hidden always-hidden" property="id" mv-default="[checklists.$index + 1].[$index + 1]" mv-mode="read"></p>
-              <label class="list-item">
-                <input type="[if(multiple, 'checkbox', 'radio')]" name="list-item" class="[if(multiple, 'checkbox', 'radio')]">
-                <span class="[if(multiple, 'checkbox', 'radio')]-custom"></span>
-                <div property="name" class="tinymce" mv-default=" " class="label"></div>
-              </label>
-              <p class="hidden title">id документов</p>
-              <p property="documents" mv-multiple mv-initial-items="0"></p>
-              <label class="hidden">
-                <input type="checkbox" property="required" checked>
-                <span>[if(required, 'Обязательный', 'Необязательный')] пункт</span>
-              </label>
-            </section>
-          </section>
-          <p class="hidden title">Пояснительный текст над кнопкой перехода к следующему шагу (завершения задачи)</p>
-          <p property="footer_description" class="[if(len(footer_description) > 1, 'footer-description', '')]" mv-default=" "></p>
-        </details>
-        <h3 class="hidden">Уведомление</h3>
-        <section class="hidden" property="notification">
-          <p class="hidden title">Заголовок</p>
-          <p property="title" mv-default=" "></p>
-          <p class="hidden title">Основное содержание</p>
-          <div property="description" class="tinymce" mv-default=" "></div>
-          <p class="hidden title">Пояснительный текст над кнопкой закрытия уведомления</p>
-          <p property="footer" mv-default=" "></p>
-          <p class="hidden title">Текст на кнопке закрытия уведомления</p>
-          <p property="button_text" mv-default=" "></p>
-          <h4>Иконка в уведомлении</h4>
-          <section property="icon">
-            <p class="title">Название (первая часть имени файла)</p>
-            <select property="name" mv-default=" ">
-              <option value=" ">--Выберите из списка--</option>
-              <option value="alert">Предупреждение</option>
-              <option value="pen">Сбор сведений</option>
-              <option value="phone">Передача сведений</option>
-              <option value="time">Время</option>
-            </select>
-            <p class="title">Размер (вторая часть имени файла)</p>
-            <select property="size" mv-default=" ">
-              <option value=" ">--Выберите из списка--</option>
-              <option value="small">По пояс</option>
-              <option value="big">В полный рост</option>
-            </select>
-            <p class="title">Расширение (тип файла)</p>
-            <select property="ext" mv-default=" ">
-              <option value=" ">--Выберите из списка--</option>
-              <option value="svg">*.svg</option>
-              <option value="png">*.png</option>
-              <option value="jpg">*.jpg</option>
-            </select>
-            <img src="[if(name != ' ' and size!= ' ' and ext != ' ', './images/' & name & '_' & size & '.' & ext)]" alt="Образец иконки">
-          </section>
-        </section>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <p>
-      Сделано с ♥︎ <a href="https://d12n.me/" target="_blank">Дмитрием Шарабиным</a> с помощью <a href="https://mavo.io/"
-        target="_blank">Mavo</a>.
-    </p>
-  </footer>
-</body>
+		<!-- Roboto font -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+			type="text/css"
+		/>
+
+		<!-- Mavo -->
+		<link rel="stylesheet" href="css/mavo.css" />
+		<script src="js/mavo.min.js"></script>
+
+		<!-- Mavo Plugins -->
+		<script src="js/mavo-locale-ru.js"></script>
+		<script src="js/mavo-tinymce.js"></script>
+		<script src="js/mavo-clear.js"></script>
+
+		<title>Интерактивный рабочий блокнот | Конструктор визардов</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>Конструктор визардов</h1>
+		</header>
+
+		<main>
+			<div
+				mv-app="wizardConstructor"
+				mv-storage="local"
+				mv-bar="import export edit save clear"
+				lang="ru"
+			>
+				<aside class="breadcrumbs">
+					<ol>
+						<li mv-multiple mv-value="steps.short_name"></li>
+					</ol>
+				</aside>
+
+				<section class="wizard">
+					<section class="basic-parameters">
+						<h3 class="hidden">Базовые параметры</h3>
+
+						<p class="hidden title">id задачи</p>
+						<p class="hidden" property="id" mv-default=" "></p>
+
+						<p class="hidden title">Название</p>
+						<h2 property="name" mv-default=" "></h2>
+
+						<p class="hidden title">Описание</p>
+						<p property="description" mv-default=" "></p>
+
+						<p
+							class="hidden always-hidden title"
+							property="type"
+							mv-default="wizard"
+							mv-mode="read"
+						></p>
+					</section>
+
+					<h3 class="hidden">Параметры уведомления</h3>
+					<section
+						class="hidden"
+						property="run_at"
+						mv-multiple
+						mv-initial-items="0"
+					>
+						<p class="hidden title">Время</p>
+						<p type="text" property="at" mv-default="08:00"></p>
+						<label>
+							<input type="checkbox" property="bell" checked />
+							<span>Оповещение</span>
+						</label>
+					</section>
+
+					<label class="hidden">
+						Режим работы
+						<select property="exec_mode">
+							<option value="background">с фоновым режимом</option>
+							<option value="permanent">непрерывный</option>
+						</select>
+					</label>
+
+					<h3 class="hidden">Шаги</h3>
+					<meta property="numOfSteps" content="[count(steps)]" />
+					<div
+						class="switch-buttons"
+						style="display: [if(numOfSteps > 0, 'block')];"
+					>
+						<button
+							onclick="document.querySelectorAll('details').forEach(d => d.open = false);"
+						>
+							Свернуть все шаги
+						</button>
+						<button
+							onclick="document.querySelectorAll('details').forEach(d => d.open = true);"
+						>
+							Развернуть все шаги
+						</button>
+					</div>
+
+					<details property="steps" mv-multiple mv-initial-items="0" open>
+						<summary>Шаг [id]</summary>
+						<div class="steps-adjust-buttons">
+							<button
+								class="move-button"
+								mv-if="$index > 0"
+								mv-action="set(id, $index), move(steps, $index - 1), set(id, $index + 1)"
+								title="Переместить вверх"
+							>
+								⬆︎
+							</button>
+							<button
+								class="move-button"
+								mv-if="numOfSteps - 1 > $index"
+								mv-action="set(id, $index + 2), move(steps, $index + 2)"
+								title="Переместить вниз"
+							>
+								⬇︎
+							</button>
+							<button
+								class="clone-button"
+								mv-action="add(steps, steps, $index)"
+								title="Дублировать шаг"
+							>
+								Дублировать
+							</button>
+						</div>
+
+						<p class="hidden always-hidden title">Номер шага</p>
+						<p
+							class="hidden always-hidden"
+							property="id"
+							mv-default="[$index + 1]"
+							mv-mode="read"
+						></p>
+
+						<p class="hidden title">Содержание шага</p>
+						<p property="name" mv-default=" " class="step-name"></p>
+
+						<p class="hidden title">Текст в хлебных крошках</p>
+						<p class="hidden" property="short_name" mv-default=" "></p>
+
+						<p class="hidden title">Примечание к шагу</p>
+						<div class="[if(len(description) > 1, 'info-wrap', '')]">
+							<div class="[if(len(description) > 1, 'info-wrap__icon', '')]">
+								<svg
+									version="1.1"
+									viewBox="0 0 25 25"
+									class="svg-icon"
+									style="display: none;"
+									width="17"
+									height="17"
+								>
+									<path
+										fill="#c5676cб"
+										stroke="none"
+										pid="0"
+										d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"
+									></path>
+								</svg>
+							</div>
+
+							<div property="description" class="tinymce" mv-default=" "></div>
+						</div>
+
+						<p class="hidden title">id документов</p>
+						<p
+							property="documents"
+							mv-multiple
+							mv-default=" "
+							mv-initial-items="0"
+						></p>
+
+						<h4 class="hidden">Списки действий</h4>
+						<section property="checklists" mv-multiple mv-initial-items="0">
+							<p class="hidden always-hidden title">id списка</p>
+							<p
+								class="hidden always-hidden"
+								property="id"
+								mv-default="[$index + 1]"
+								mv-mode="read"
+							></p>
+
+							<p class="hidden title">
+								Текст инструкции/пояснения к пунктам списка
+							</p>
+							<p property="name" class="list-instruction" mv-default=" "></p>
+
+							<p class="hidden title">Примечание к пунктам списка</p>
+							<div class="[if(len(description) > 1, 'info-wrap', '')]">
+								<div class="[if(len(description) > 1, 'info-wrap__icon', '')]">
+									<svg
+										version="1.1"
+										viewBox="0 0 25 25"
+										class="svg-icon"
+										style="display: none;"
+										width="17"
+										height="17"
+									>
+										<path
+											fill="#c5676cб"
+											stroke="none"
+											pid="0"
+											d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm1.25 18.75h-2.5v-7.5h2.5v7.5zm0-10h-2.5v-2.5h2.5v2.5z"
+										></path>
+									</svg>
+								</div>
+
+								<div
+									property="description"
+									class="tinymce"
+									mv-default=" "
+								></div>
+							</div>
+
+							<label class="hidden">
+								<h5>Чек-лист/Ветвление</h5>
+								<input type="checkbox" property="multiple" checked />
+								<span>[if(multiple, 'Чек-лист', 'Ветвление')]</span>
+							</label>
+
+							<p class="hidden title">id документов</p>
+							<p property="documents" mv-multiple mv-initial-items="0"></p>
+
+							<h5 class="hidden">Пункты списка</h5>
+							<section property="items" mv-multiple>
+								<p class="hidden always-hidden title">id пункта</p>
+								<p
+									class="hidden always-hidden"
+									property="id"
+									mv-default="[checklists.$index + 1].[$index + 1]"
+									mv-mode="read"
+								></p>
+
+								<label class="list-item">
+									<input
+										type="[if(multiple, 'checkbox', 'radio')]"
+										name="list-item"
+										class="[if(multiple, 'checkbox', 'radio')]"
+									/>
+									<span
+										class="[if(multiple, 'checkbox', 'radio')]-custom"
+									></span>
+									<div
+										property="name"
+										class="tinymce"
+										mv-default=" "
+										class="label"
+									></div>
+								</label>
+
+								<p class="hidden title">id документов</p>
+								<p property="documents" mv-multiple mv-initial-items="0"></p>
+
+								<label class="hidden">
+									<input type="checkbox" property="required" checked />
+									<span
+										>[if(required, 'Обязательный', 'Необязательный')]
+										пункт</span
+									>
+								</label>
+							</section>
+						</section>
+
+						<p class="hidden title">
+							Пояснительный текст над кнопкой перехода к следующему шагу
+							(завершения задачи)
+						</p>
+						<p
+							property="footer_description"
+							class="[if(len(footer_description) > 1, 'footer-description', '')]"
+							mv-default=" "
+						></p>
+					</details>
+
+					<h3 class="hidden">Уведомление</h3>
+					<section class="hidden" property="notification">
+						<p class="hidden title">Заголовок</p>
+						<p property="title" mv-default=" "></p>
+
+						<p class="hidden title">Основное содержание</p>
+						<div property="description" class="tinymce" mv-default=" "></div>
+
+						<p class="hidden title">
+							Пояснительный текст над кнопкой закрытия уведомления
+						</p>
+						<p property="footer" mv-default=" "></p>
+
+						<p class="hidden title">Текст на кнопке закрытия уведомления</p>
+						<p property="button_text" mv-default=" "></p>
+
+						<h4>Иконка в уведомлении</h4>
+						<section property="icon">
+							<p class="title">Название (первая часть имени файла)</p>
+							<select property="name" mv-default=" ">
+								<option value=" ">--Выберите из списка--</option>
+								<option value="alert">Предупреждение</option>
+								<option value="pen">Сбор сведений</option>
+								<option value="phone">Передача сведений</option>
+								<option value="time">Время</option>
+							</select>
+
+							<p class="title">Размер (вторая часть имени файла)</p>
+							<select property="size" mv-default=" ">
+								<option value=" ">--Выберите из списка--</option>
+								<option value="small">По пояс</option>
+								<option value="big">В полный рост</option>
+							</select>
+
+							<p class="title">Расширение (тип файла)</p>
+							<select property="ext" mv-default=" ">
+								<option value=" ">--Выберите из списка--</option>
+								<option value="svg">*.svg</option>
+								<option value="png">*.png</option>
+								<option value="jpg">*.jpg</option>
+							</select>
+
+							<img
+								src="[if(name != ' ' and size!= ' ' and ext != ' ', './images/' & name & '_' & size & '.' & ext)]"
+								alt="Образец иконки"
+							/>
+						</section>
+					</section>
+				</section>
+			</div>
+		</main>
+
+		<footer>
+			<p>
+				Сделано с ♥︎
+				<a href="https://d12n.me/" target="_blank">Дмитрием Шарабиным</a> с
+				помощью <a href="https://mavo.io/" target="_blank">Mavo</a>.
+			</p>
+		</footer>
+	</body>
+</html>
