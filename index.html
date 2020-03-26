@@ -100,8 +100,14 @@
 						mv-multiple
 						mv-initial-items="0"
 						open="[open]"
+						mv-action="set(open, !open)"
 					>
-						<meta property="open" mv-default="true" mv-storage="none" />
+						<meta
+							property="open"
+							mv-default="true"
+							datatype="boolean"
+							mv-storage="none"
+						/>
 						<summary>Шаг [id]</summary>
 						<div class="steps-adjust-buttons">
 							<button
