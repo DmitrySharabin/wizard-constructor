@@ -34,6 +34,22 @@
 		</header>
 
 		<main>
+			<div hidden mv-app mv-init="election_types.json">
+				<select id="elections">
+					<option mv-multiple="elections" value="[id]" mv-group>
+						[name]
+					</option>
+				</select>
+			</div>
+
+			<div hidden mv-app mv-init="document_categories.json">
+				<select id="categories">
+					<option mv-multiple="categories" value="[id]" mv-group>
+						[name]
+					</option>
+				</select>
+			</div>
+
 			<div
 				mv-app="wizardConstructor"
 				mv-storage="local"
@@ -59,6 +75,21 @@
 						<p property="description"></p>
 
 						<meta property="type" content="wizard" />
+
+						<h4 class="hidden title">Виды выборов</h4>
+						<p
+							mv-multiple="election_types"
+							mv-edit="#elections"
+							mv-initial-items="0"
+							mv-default="5"
+						></p>
+
+						<h4 class="hidden title">Категории</h4>
+						<p
+							mv-multiple="document_categories"
+							mv-edit="#categories"
+							mv-initial-items="0"
+						></p>
 					</section>
 
 					<h3 class="hidden">Параметры уведомления</h3>
