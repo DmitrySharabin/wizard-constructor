@@ -369,11 +369,15 @@ button.mv-add:hover {
 	list-style-type: none;
 }
 
-.tinymce li {
+.tinymce ol {
+	padding-left: 30px;
+}
+
+.tinymce ul li {
 	position: relative;
 }
 
-.tinymce li::before {
+.tinymce ul li::before {
 	position: absolute;
 	left: -30px;
 	content: "—";
