@@ -162,12 +162,7 @@
 						</div>
 
 						<h4 class="hidden title">id документов</h4>
-						<p
-							property="documents"
-							mv-multiple
-							mv-default=" "
-							mv-initial-items="0"
-						></p>
+						<p property="documents" mv-multiple mv-initial-items="0"></p>
 
 						<h4 class="hidden">Списки действий</h4>
 						<section property="checklists" mv-multiple mv-initial-items="0">
@@ -199,11 +194,7 @@
 									</svg>
 								</div>
 
-								<div
-									property="description"
-									class="tinymce"
-									mv-default=" "
-								></div>
+								<div property="description" class="tinymce"></div>
 							</div>
 
 							<label class="hidden">
@@ -233,11 +224,7 @@
 									<span
 										class="[if(multiple, 'checkbox', 'radio')]-custom"
 									></span>
-									<div
-										property="name"
-										class="tinymce label"
-										mv-default=" "
-									></div>
+									<div property="name" class="tinymce label"></div>
 								</label>
 
 								<h4 class="hidden title">id документов</h4>
@@ -260,7 +247,6 @@
 						<p
 							property="footer_description"
 							class="[if(len(footer_description) > 1, 'footer-description')]"
-							mv-default=" "
 						></p>
 					</details>
 
