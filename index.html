@@ -34,6 +34,7 @@
 		</header>
 
 		<main>
+			<!-- Приложение-редактор для типов выборов -->
 			<div hidden mv-app mv-init="election_types.json">
 				<select id="elections">
 					<option mv-multiple="elections" value="[id]" mv-group>
@@ -42,6 +43,7 @@
 				</select>
 			</div>
 
+			<!-- Приложение-редактор для категорий, к которым относится пошаговая инструкция -->
 			<div hidden mv-app mv-init="document_categories.json">
 				<select id="categories">
 					<option mv-multiple="categories" value="[id]" mv-group>
@@ -50,6 +52,7 @@
 				</select>
 			</div>
 
+			<!-- Основное приложение -->
 			<div
 				mv-app="wizardConstructor"
 				mv-storage="local"
