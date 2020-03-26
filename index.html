@@ -50,13 +50,13 @@
 						<h3 class="hidden">Базовые параметры</h3>
 
 						<p class="hidden title">id задачи</p>
-						<p class="hidden" property="id" mv-default=" "></p>
+						<p class="hidden" property="id"></p>
 
 						<p class="hidden title">Название</p>
-						<h2 property="name" mv-default=" "></h2>
+						<h2 property="name"></h2>
 
 						<p class="hidden title">Описание</p>
-						<p property="description" mv-default=" "></p>
+						<p property="description"></p>
 
 						<meta property="type" content="wizard" />
 					</section>
@@ -133,10 +133,10 @@
 						<meta property="id" content="[$index + 1]" mv-storage="inherit" />
 
 						<p class="hidden title">Содержание шага</p>
-						<p property="name" mv-default=" " class="step-name"></p>
+						<p property="name" class="step-name"></p>
 
 						<p class="hidden title">Текст в хлебных крошках</p>
-						<p class="hidden" property="short_name" mv-default=" "></p>
+						<p class="hidden" property="short_name"></p>
 
 						<p class="hidden title">Примечание к шагу</p>
 						<div class="[if(len(description) > 1, 'info-wrap')]">
@@ -158,7 +158,7 @@
 								</svg>
 							</div>
 
-							<div property="description" class="tinymce" mv-default=" "></div>
+							<div property="description" class="tinymce"></div>
 						</div>
 
 						<p class="hidden title">id документов</p>
@@ -177,7 +177,7 @@
 							<p class="hidden title">
 								Текст инструкции/пояснения к пунктам списка
 							</p>
-							<p property="name" class="list-instruction" mv-default=" "></p>
+							<p property="name" class="list-instruction"></p>
 
 							<p class="hidden title">Примечание к пунктам списка</p>
 							<div class="[if(len(description) > 1, 'info-wrap')]">
@@ -267,18 +267,18 @@
 					<h3 class="hidden">Уведомление</h3>
 					<section class="hidden" property="notification">
 						<p class="hidden title">Заголовок</p>
-						<p property="title" mv-default=" "></p>
+						<p property="title"></p>
 
 						<p class="hidden title">Основное содержание</p>
-						<div property="description" class="tinymce" mv-default=" "></div>
+						<div property="description" class="tinymce"></div>
 
 						<p class="hidden title">
 							Пояснительный текст над кнопкой закрытия уведомления
 						</p>
-						<p property="footer" mv-default=" "></p>
+						<p property="footer"></p>
 
 						<p class="hidden title">Текст на кнопке закрытия уведомления</p>
-						<p property="button_text" mv-default=" "></p>
+						<p property="button_text"></p>
 
 						<h4>Иконка в уведомлении</h4>
 						<section property="icon">
