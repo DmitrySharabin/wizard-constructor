@@ -49,13 +49,13 @@
 					<section class="basic-parameters">
 						<h3 class="hidden">Базовые параметры</h3>
 
-						<p class="hidden title">id задачи</p>
+						<h4 class="hidden title">id задачи</h4>
 						<p class="hidden" property="id"></p>
 
-						<p class="hidden title">Название</p>
+						<h4 class="hidden title">Название</h4>
 						<h2 property="name"></h2>
 
-						<p class="hidden title">Описание</p>
+						<h4 class="hidden title">Описание</h4>
 						<p property="description"></p>
 
 						<meta property="type" content="wizard" />
@@ -68,7 +68,7 @@
 						mv-multiple
 						mv-initial-items="0"
 					>
-						<p class="hidden title">Время</p>
+						<h4 class="hidden title">Время</h4>
 						<time property="at" datetime="08:00" mv-default="08:00"></time>
 						<label>
 							<input type="checkbox" property="bell" checked />
@@ -132,13 +132,13 @@
 						<!-- Номер шага -->
 						<meta property="id" content="[$index + 1]" mv-storage="inherit" />
 
-						<p class="hidden title">Содержание шага</p>
+						<h4 class="hidden title">Содержание шага</h4>
 						<p property="name" class="step-name"></p>
 
-						<p class="hidden title">Текст в хлебных крошках</p>
+						<h4 class="hidden title">Текст в хлебных крошках</h4>
 						<p class="hidden" property="short_name"></p>
 
-						<p class="hidden title">Примечание к шагу</p>
+						<h4 class="hidden title">Примечание к шагу</h4>
 						<div class="[if(len(description) > 1, 'info-wrap')]">
 							<div class="[if(len(description) > 1, 'info-wrap__icon')]">
 								<svg
@@ -161,7 +161,7 @@
 							<div property="description" class="tinymce"></div>
 						</div>
 
-						<p class="hidden title">id документов</p>
+						<h4 class="hidden title">id документов</h4>
 						<p
 							property="documents"
 							mv-multiple
@@ -174,12 +174,12 @@
 							<!-- id списка -->
 							<meta property="id" content="[$index + 1]" mv-storage="inherit" />
 
-							<p class="hidden title">
+							<h4 class="hidden title">
 								Текст инструкции/пояснения к пунктам списка
-							</p>
+							</h4>
 							<p property="name" class="list-instruction"></p>
 
-							<p class="hidden title">Примечание к пунктам списка</p>
+							<h4 class="hidden title">Примечание к пунктам списка</h4>
 							<div class="[if(len(description) > 1, 'info-wrap')]">
 								<div class="[if(len(description) > 1, 'info-wrap__icon')]">
 									<svg
@@ -212,7 +212,7 @@
 								<span>[if(multiple, 'Чек-лист', 'Ветвление')]</span>
 							</label>
 
-							<p class="hidden title">id документов</p>
+							<h4 class="hidden title">id документов</h4>
 							<p property="documents" mv-multiple mv-initial-items="0"></p>
 
 							<h5 class="hidden">Пункты списка</h5>
@@ -240,7 +240,7 @@
 									></div>
 								</label>
 
-								<p class="hidden title">id документов</p>
+								<h4 class="hidden title">id документов</h4>
 								<p property="documents" mv-multiple mv-initial-items="0"></p>
 
 								<label class="hidden">
@@ -253,10 +253,10 @@
 							</section>
 						</section>
 
-						<p class="hidden title">
+						<h4 class="hidden title">
 							Пояснительный текст над кнопкой перехода к следующему шагу
 							(завершения задачи)
-						</p>
+						</h4>
 						<p
 							property="footer_description"
 							class="[if(len(footer_description) > 1, 'footer-description')]"
@@ -266,23 +266,23 @@
 
 					<h3 class="hidden">Уведомление</h3>
 					<section class="hidden" property="notification">
-						<p class="hidden title">Заголовок</p>
+						<h4 class="hidden title">Заголовок</h4>
 						<p property="title"></p>
 
-						<p class="hidden title">Основное содержание</p>
+						<h4 class="hidden title">Основное содержание</h4>
 						<div property="description" class="tinymce"></div>
 
-						<p class="hidden title">
+						<h4 class="hidden title">
 							Пояснительный текст над кнопкой закрытия уведомления
-						</p>
+						</h4>
 						<p property="footer"></p>
 
-						<p class="hidden title">Текст на кнопке закрытия уведомления</p>
+						<h4 class="hidden title">Текст на кнопке закрытия уведомления</h4>
 						<p property="button_text"></p>
 
 						<h4>Иконка в уведомлении</h4>
 						<section property="icon">
-							<p class="title">Название (первая часть имени файла)</p>
+							<h4 class="title">Название (первая часть имени файла)</h4>
 							<select property="name">
 								<option value="">--Выберите из списка--</option>
 								<option value="alert">Предупреждение</option>
@@ -291,14 +291,14 @@
 								<option value="time">Время</option>
 							</select>
 
-							<p class="title">Размер (вторая часть имени файла)</p>
+							<h4 class="title">Размер (вторая часть имени файла)</h4>
 							<select property="size">
 								<option value="">--Выберите из списка--</option>
 								<option value="small">По пояс</option>
 								<option value="big">В полный рост</option>
 							</select>
 
-							<p class="title">Расширение (тип файла)</p>
+							<h4 class="title">Расширение (тип файла)</h4>
 							<select property="ext">
 								<option value="">--Выберите из списка--</option>
 								<option value="svg">*.svg</option>

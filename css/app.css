@@ -272,9 +272,11 @@ summary {
 }
 
 /* Стилизация заголовков блоков в режиме редактирования */
+h4.title,
 .title {
 	margin: 10px;
 	font-style: italic;
+	font-weight: 300;
 	color: var(--main-color, inherit);
 }
 
