@@ -70,7 +70,7 @@ main {
 }
 
 /* Стилизация приложения */
-[mv-app] {
+[mv-app="wizardConstructor"] {
 	grid-column: 2;
 	padding: 30px;
 	display: grid;
