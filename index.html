@@ -283,8 +283,8 @@
 						<h4>Иконка в уведомлении</h4>
 						<section property="icon">
 							<p class="title">Название (первая часть имени файла)</p>
-							<select property="name" mv-default=" ">
-								<option value=" ">--Выберите из списка--</option>
+							<select property="name">
+								<option value="">--Выберите из списка--</option>
 								<option value="alert">Предупреждение</option>
 								<option value="pen">Сбор сведений</option>
 								<option value="phone">Передача сведений</option>
@@ -292,22 +292,22 @@
 							</select>
 
 							<p class="title">Размер (вторая часть имени файла)</p>
-							<select property="size" mv-default=" ">
-								<option value=" ">--Выберите из списка--</option>
+							<select property="size">
+								<option value="">--Выберите из списка--</option>
 								<option value="small">По пояс</option>
 								<option value="big">В полный рост</option>
 							</select>
 
 							<p class="title">Расширение (тип файла)</p>
-							<select property="ext" mv-default=" ">
-								<option value=" ">--Выберите из списка--</option>
+							<select property="ext">
+								<option value="">--Выберите из списка--</option>
 								<option value="svg">*.svg</option>
 								<option value="png">*.png</option>
 								<option value="jpg">*.jpg</option>
 							</select>
 
 							<img
-								src="[if(name != ' ' and size!= ' ' and ext != ' ', './images/' & name & '_' & size & '.' & ext)]"
+								src="[if(name and size and ext, './images/' & name & '_' & size & '.' & ext)]"
 								alt="Образец иконки"
 							/>
 						</section>
