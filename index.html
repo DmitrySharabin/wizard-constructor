@@ -106,7 +106,7 @@
 						<div class="steps-adjust-buttons">
 							<button
 								class="move-button"
-								mv-if="$index > 0"
+								hidden="[$index = 0]"
 								mv-action="set(id, $index), move(steps, $index - 1), set(id, $index + 1)"
 								title="Переместить вверх"
 							>
@@ -114,7 +114,7 @@
 							</button>
 							<button
 								class="move-button"
-								mv-if="numOfSteps - 1 > $index"
+								hidden="[numOfSteps - 1 = $index]"
 								mv-action="set(id, $index + 2), move(steps, $index + 2)"
 								title="Переместить вниз"
 							>
