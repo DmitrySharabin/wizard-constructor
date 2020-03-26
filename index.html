@@ -58,12 +58,7 @@
 						<p class="hidden title">Описание</p>
 						<p property="description" mv-default=" "></p>
 
-						<p
-							class="hidden always-hidden title"
-							property="type"
-							mv-default="wizard"
-							mv-mode="read"
-						></p>
+						<meta property="type" content="wizard" />
 					</section>
 
 					<h3 class="hidden">Параметры уведомления</h3>
@@ -106,7 +101,7 @@
 						mv-initial-items="0"
 						open="[open]"
 					>
-						<meta property="open" mv-default="true" />
+						<meta property="open" mv-default="true" mv-storage="none" />
 						<summary>Шаг [id]</summary>
 						<div class="steps-adjust-buttons">
 							<button
@@ -134,13 +129,8 @@
 							</button>
 						</div>
 
-						<p class="hidden always-hidden title">Номер шага</p>
-						<p
-							class="hidden always-hidden"
-							property="id"
-							mv-default="[$index + 1]"
-							mv-mode="read"
-						></p>
+						<!-- Номер шага -->
+						<meta property="id" content="[$index + 1]" mv-storage="inherit" />
 
 						<p class="hidden title">Содержание шага</p>
 						<p property="name" mv-default=" " class="step-name"></p>
@@ -181,13 +171,8 @@
 
 						<h4 class="hidden">Списки действий</h4>
 						<section property="checklists" mv-multiple mv-initial-items="0">
-							<p class="hidden always-hidden title">id списка</p>
-							<p
-								class="hidden always-hidden"
-								property="id"
-								mv-default="[$index + 1]"
-								mv-mode="read"
-							></p>
+							<!-- id списка -->
+							<meta property="id" content="[$index + 1]" mv-storage="inherit" />
 
 							<p class="hidden title">
 								Текст инструкции/пояснения к пунктам списка
@@ -232,13 +217,12 @@
 
 							<h5 class="hidden">Пункты списка</h5>
 							<section property="items" mv-multiple>
-								<p class="hidden always-hidden title">id пункта</p>
-								<p
-									class="hidden always-hidden"
+								<!-- id пункта -->
+								<meta
 									property="id"
-									mv-default="[checklists.$index + 1].[$index + 1]"
-									mv-mode="read"
-								></p>
+									content="[checklists.$index + 1].[$index + 1]"
+									mv-storage="inherit"
+								/>
 
 								<label class="list-item">
 									<input

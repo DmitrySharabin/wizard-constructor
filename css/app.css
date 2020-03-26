@@ -92,7 +92,7 @@ main {
 }
 
 /* И отображаем их в режиме редактирования */
-[mv-mode="edit"] .hidden:not(.always-hidden) {
+[mv-mode="edit"] .hidden {
 	display: block;
 }
 
@@ -115,8 +115,8 @@ summary {
 	font-weight: 400;
 }
 
-/* Скрываем свойство open — оно используется в служебных целях. Пользователь не должен его менять. */
-[mv-app][mv-mode="edit"] [property="open"] {
+/* Скрываем свойства open и type — они используются в служебных целях. Пользователь не должен их менять. */
+[mv-app][mv-mode="edit"] meta[property] {
 	display: none;
 }
 
