@@ -292,6 +292,11 @@ time[property][mv-mode="edit"] {
 	display: block;
 }
 
+/* Длинные названия видов выборов, категорий и документов должны нормально переноситься в режиме редактирования */
+[property] select.mv-editor {
+	white-space: initial !important;
+}
+
 /* Убираем ненужную тень: редактируемые блоки имею рамку */
 [mv-app][mv-mode="edit"] [property] .mv-editor:focus {
 	box-shadow: none !important;

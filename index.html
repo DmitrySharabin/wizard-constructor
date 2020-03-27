@@ -52,6 +52,15 @@
 				</select>
 			</div>
 
+			<!-- Приложение-редактор для документов -->
+			<div hidden mv-app mv-init="data/documents.json">
+				<select id="documents">
+					<option mv-multiple="documents" value="[id]" mv-group>
+						[id] | [name]
+					</option>
+				</select>
+			</div>
+
 			<!-- Основное приложение -->
 			<div
 				mv-app="wizardConstructor"
@@ -201,7 +210,12 @@
 						</div>
 
 						<h4 class="hidden title">id документов</h4>
-						<p property="documents" mv-multiple mv-initial-items="0"></p>
+						<p
+							property="documents"
+							mv-multiple
+							mv-initial-items="0"
+							mv-edit="#documents"
+						></p>
 
 						<h4 class="hidden">Списки действий</h4>
 						<section property="checklists" mv-multiple mv-initial-items="0">
@@ -243,7 +257,12 @@
 							</label>
 
 							<h4 class="hidden title">id документов</h4>
-							<p property="documents" mv-multiple mv-initial-items="0"></p>
+							<p
+								property="documents"
+								mv-multiple
+								mv-initial-items="0"
+								mv-edit="#documents"
+							></p>
 
 							<h5 class="hidden">Пункты списка</h5>
 							<section property="items" mv-multiple>
@@ -267,7 +286,12 @@
 								</label>
 
 								<h4 class="hidden title">id документов</h4>
-								<p property="documents" mv-multiple mv-initial-items="0"></p>
+								<p
+									property="documents"
+									mv-multiple
+									mv-initial-items="0"
+									mv-edit="#documents"
+								></p>
 
 								<label class="hidden">
 									<input type="checkbox" property="required" checked />
