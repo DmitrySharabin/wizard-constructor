@@ -111,6 +111,53 @@
 							mv-initial-items="0"
 							class="hidden"
 						></p>
+
+						<h4 class="hidden title">Режим использования КОИБ</h4>
+						<div class="hidden koib-mode">
+							<label>
+								<input
+									property="mode"
+									mv-storage="none"
+									type="radio"
+									name="koib-mode"
+									value="false"
+								/>только без КОИБ
+							</label>
+							<label>
+								<input type="radio" name="koib-mode" value="true" />для любого
+								КОИБ
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="koib-mode"
+									value="custom"
+								/>настраиваемый
+							</label>
+
+							<button
+								mv-action="set(mode, null), $.properties($$('[name=koib-mode]'), {checked: false})"
+								style="[if(!mode, 'visibility: hidden')]"
+							>
+								Сбросить
+							</button>
+						</div>
+
+						<meta
+							property="only"
+							content="[
+								if(mode = 'false', group('use_koib': false),
+									if(mode = 'true', group('use_koib': true),
+										if(mode = 'custom', group('use_koib': koib))
+										)
+								)]"
+							mv-storage="inherit"
+						/>
+
+						<div mv-if="mode = custom">
+							<h5 class="hidden">Виды КОИБ</h5>
+							<span mv-multiple="koib" mv-edit="#koib" mv-storage="none"></span>
+						</div>
 					</section>
 
 					<h3 class="hidden">Параметры уведомления</h3>

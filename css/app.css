@@ -96,6 +96,30 @@ main {
 	display: block;
 }
 
+/* Стилизация блока с параметрами использования КОИБ */
+[mv-mode="edit"] .koib-mode {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 10px;
+}
+
+[mv-mode="edit"] .koib-mode input {
+	margin-right: 0.7em;
+}
+
+[mv-mode="edit"] .koib-mode button {
+	font-size: inherit;
+	padding: 0.4em 1em;
+}
+
+[mv-mode="edit"] .koib-mode button::before {
+	content: "✕";
+	margin-right: 0.3em;
+	font-weight: bold;
+	color: var(--description-color, inherit);
+}
+
 /* Стилизация блоков с шагами визарда */
 [property="steps"] {
 	margin: 10px;
@@ -295,7 +319,7 @@ time[property][mv-mode="edit"] {
 }
 
 /* Длинные названия видов выборов, категорий и документов должны нормально переноситься в режиме редактирования */
-[property] select.mv-editor {
+[property]:not([property*="koib"]) select.mv-editor {
 	white-space: initial !important;
 	width: 100% !important;
 }
@@ -374,7 +398,8 @@ button.mv-add:hover {
 }
 
 button[class*="-button"]:hover,
-.switch-buttons button:hover {
+.switch-buttons button:hover,
+.koib-mode button:hover {
 	filter: invert(100%);
 }
 
