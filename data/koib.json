@@ -1,0 +1,29 @@
+[
+  {
+    "id": "koib-2010",
+    "name": "КОИБ–2010",
+    "icon": {
+      "name": "koib-2010",
+      "size": "big",
+      "ext": "jpg"
+    }
+  },
+  {
+    "id": "koib-2017",
+    "name": "КОИБ–2017",
+    "icon": {
+      "name": "koib-2017",
+      "size": "big",
+      "ext": "jpg"
+    }
+  },
+  {
+    "id": "koib-2017-bavu",
+    "name": "КОИБ–2017–БАВУ",
+    "icon": {
+      "name": "koib-2017-bavu",
+      "size": "big",
+      "ext": "jpg"
+    }
+  }
+]

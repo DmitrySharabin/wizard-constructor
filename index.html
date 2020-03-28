@@ -61,6 +61,13 @@
 				</select>
 			</div>
 
+			<!-- Приложение-редактор для КОИБ -->
+			<div hidden mv-app mv-init="data/koib.json">
+				<select id="koib">
+					<option mv-multiple value="[id]" mv-group>[name]</option>
+				</select>
+			</div>
+
 			<!-- Основное приложение -->
 			<div
 				mv-app="wizardConstructor"
