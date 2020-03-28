@@ -25,6 +25,9 @@
 		<script src="js/mavo-tinymce.js"></script>
 		<script src="js/mavo-clear.js"></script>
 
+		<!-- Отдельная логика -->
+		<script src="js/wizard.js"></script>
+
 		<title>Интерактивный рабочий блокнот | Конструктор визардов</title>
 	</head>
 
@@ -154,8 +157,8 @@
 							mv-storage="[if(only = '', 'none', 'inherit')]"
 						/>
 
-						<div mv-if="mode = custom">
-							<h5 class="hidden">Виды КОИБ</h5>
+						<div mv-if="mode = custom" class="hidden">
+							<h5>Виды КОИБ</h5>
 							<span mv-multiple="koib" mv-edit="#koib" mv-storage="none"></span>
 						</div>
 					</section>
