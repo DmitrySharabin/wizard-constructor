@@ -151,7 +151,7 @@
 										if(mode = 'custom', group('use_koib': koib))
 										)
 								)]"
-							mv-storage="inherit"
+							mv-storage="[if(only = '', 'none', 'inherit')]"
 						/>
 
 						<div mv-if="mode = custom">
