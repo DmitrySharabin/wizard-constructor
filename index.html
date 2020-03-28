@@ -105,12 +105,7 @@
 					</section>
 
 					<h3 class="hidden">Параметры уведомления</h3>
-					<section
-						class="hidden"
-						property="run_at"
-						mv-multiple
-						mv-initial-items="0"
-					>
+					<section class="hidden" mv-multiple="run_at" mv-initial-items="0">
 						<h4 class="hidden title">Время</h4>
 						<time property="at" datetime="08:00" mv-default="08:00"></time>
 						<label>
@@ -138,12 +133,7 @@
 						</button>
 					</div>
 
-					<details
-						property="steps"
-						mv-multiple
-						mv-initial-items="0"
-						open="[open]"
-					>
+					<details mv-multiple="steps" mv-initial-items="0" open="[open]">
 						<meta
 							property="open"
 							mv-default="true"
@@ -211,14 +201,13 @@
 
 						<h4 class="hidden title">id документов</h4>
 						<p
-							property="documents"
-							mv-multiple
+							mv-multiple="documents"
 							mv-initial-items="0"
 							mv-edit="#documents"
 						></p>
 
 						<h4 class="hidden">Списки действий</h4>
-						<section property="checklists" mv-multiple mv-initial-items="0">
+						<section mv-multiple="checklists" mv-initial-items="0">
 							<!-- id списка -->
 							<meta property="id" content="[$index + 1]" mv-storage="inherit" />
 
@@ -258,14 +247,13 @@
 
 							<h4 class="hidden title">id документов</h4>
 							<p
-								property="documents"
-								mv-multiple
+								mv-multiple="documents"
 								mv-initial-items="0"
 								mv-edit="#documents"
 							></p>
 
 							<h5 class="hidden">Пункты списка</h5>
-							<section property="items" mv-multiple>
+							<section mv-multiple="items">
 								<!-- id пункта -->
 								<meta
 									property="id"
@@ -287,8 +275,7 @@
 
 								<h4 class="hidden title">id документов</h4>
 								<p
-									property="documents"
-									mv-multiple
+									mv-multiple="documents"
 									mv-initial-items="0"
 									mv-edit="#documents"
 								></p>
