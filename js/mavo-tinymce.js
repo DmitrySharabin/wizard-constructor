@@ -28,7 +28,8 @@ Mavo.Elements.register(".tinymce", {
 				toolbar: "bold italic | bullist numlist",
 				plugins: "paste lists tabfocus",
 				invalid_styles: "color background font-size font-weight font-family font-style font", // https://medium.com/@martin.sikora/how-to-make-tinymce-to-output-clean-html-b4854daeb286
-				invalid_elements: "span,h1,h2,h3,h4,h5,h6"
+				invalid_elements: "span,h1,h2,h3,h4,h5,h6",
+				language: "ru"
 			}).then(editors => {
 				this.element.tinymce = editors[0];
 
