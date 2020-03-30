@@ -436,3 +436,12 @@ button[class*="-button"]:hover,
 	display: inline-block;
 	padding: 0 5px;
 }
+
+/* Скрываем плейсхолдеры для редактируемых свойств: они на английском языке, плюс, есть заголовки */
+[property][mv-mode="edit"]:not([typeof]):not([mv-group])[mv-attribute="none"].mv-empty.mv-pending-edit:not([datatype="boolean"])::before {
+	content: "" !important;
+}
+
+::placeholder {
+	color: transparent;
+}
