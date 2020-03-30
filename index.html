@@ -110,6 +110,7 @@
 							mv-default="5"
 							class="hidden"
 						></p>
+						<button class="mv-add-election_types">Добавить выборы</button>
 
 						<h4 class="hidden title">Категории</h4>
 						<p
@@ -118,6 +119,9 @@
 							mv-initial-items="0"
 							class="hidden"
 						></p>
+						<button class="mv-add-document_categories">
+							Добавить категорию
+						</button>
 
 						<h4 class="hidden title">Режим использования КОИБ</h4>
 						<div class="hidden koib-mode">
@@ -164,6 +168,7 @@
 						<div mv-if="mode = custom" class="hidden">
 							<h5>Виды КОИБ</h5>
 							<span mv-multiple="koib" mv-edit="#koib" mv-storage="none"></span>
+							<button class="mv-add-koib">Добавить КОИБ</button>
 						</div>
 					</section>
 
@@ -176,6 +181,7 @@
 							<span>Оповещение</span>
 						</label>
 					</section>
+					<button class="mv-add-run_at">Добавить время</button>
 
 					<label class="hidden">
 						Режим работы
@@ -275,6 +281,7 @@
 							mv-initial-items="0"
 							mv-edit="#documents"
 						></p>
+						<button class="mv-add-documents">Добавить документ</button>
 
 						<h4 class="hidden">Списки действий</h4>
 						<section mv-multiple="checklists" mv-initial-items="0">
@@ -325,6 +332,7 @@
 								mv-initial-items="0"
 								mv-edit="#documents"
 							></p>
+							<button class="mv-add-documents">Добавить документ</button>
 
 							<h5 class="hidden">Пункты списка</h5>
 							<section mv-multiple="items">
@@ -357,6 +365,7 @@
 									mv-initial-items="0"
 									mv-edit="#documents"
 								></p>
+								<button class="mv-add-documents">Добавить документ</button>
 
 								<label class="hidden">
 									<input type="checkbox" property="required" checked />
@@ -366,7 +375,9 @@
 									>
 								</label>
 							</section>
+							<button class="mv-add-items">Добавить пункт</button>
 						</section>
+						<button class="mv-add-checklists">Добавить список</button>
 
 						<h4 class="hidden title">
 							Пояснительный текст над кнопкой перехода к следующему шагу
@@ -377,6 +388,7 @@
 							class="[if(len(footer_description) > 1, 'footer-description')]"
 						></p>
 					</details>
+					<button class="mv-add-steps">Добавить шаг</button>
 
 					<h3 class="hidden">Описание переходов (воркфлоу)</h3>
 					<!-- Список шагов в инструкции -->
@@ -457,10 +469,16 @@
 								<label>
 									Пункты
 									<span mv-multiple="items"></span>
+									<button class="mv-add-items">Добавить пункт</button>
 								</label>
 							</div>
+							<button class="mv-add-conditions">
+								Добавить условие
+							</button>
 						</div>
+						<button class="mv-add-flow">Добавить вариант</button>
 					</section>
+					<button class="mv-add-workflow">Добавить переход</button>
 
 					<h3 class="hidden">Уведомление</h3>
 					<section class="hidden" property="notification">
