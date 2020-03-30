@@ -75,8 +75,12 @@
 			<div
 				mv-app="wizardConstructor"
 				mv-storage="local"
-				mv-bar="import export edit save clear"
+				mv-bar="import edit save clear"
 			>
+				<div class="mv-bar mv-ui">
+					<a class="mv-button" download="[id].json">Скачать</a>
+				</div>
+
 				<aside class="breadcrumbs">
 					<ol>
 						<li mv-multiple mv-value="steps.short_name"></li>
@@ -366,6 +370,90 @@
 							class="[if(len(footer_description) > 1, 'footer-description')]"
 						></p>
 					</details>
+
+					<h3 class="hidden">Описание переходов (воркфлоу)</h3>
+					<!-- Список шагов в инструкции -->
+					<div hidden>
+						<select id="steps-list">
+							<option mv-multiple mv-value="steps" value="[id]" mv-group>
+								[id] | [short_name]
+							</option>
+						</select>
+					</div>
+
+					<section class="hidden" mv-multiple="workflow" mv-initial-items="0">
+						<meta property="flowNum" content="[$index]" />
+
+						<h4 class="hidden">С шага</h4>
+						<p property="from" mv-edit="#steps-list" mv-storage="none"></p>
+
+						<!-- Полное описание одного перехода в близком к нужному формате -->
+						<meta
+							property="res"
+							content="[list(from, whereTo)]"
+							mv-storage="inherit"
+						/>
+
+						<!-- Описание одного перехода (образуют коллекцию) -->
+						<div mv-multiple="flow" mv-storage="none">
+							<h4 class="hidden">
+								перейти на
+								<label>
+									<input
+										property="goto"
+										type="radio"
+										name="goto[flowNum][$index]"
+										value="step"
+									/>
+									шаг
+								</label>
+								<label>
+									<input
+										type="radio"
+										name="goto[flowNum][$index]"
+										value="task"
+									/>
+									задачу
+								</label>
+							</h4>
+
+							<!-- Если переход на шаг, нужно указать, на какой -->
+							<p
+								mv-if="goto = 'step'"
+								property="to"
+								mv-edit="#steps-list"
+								mv-storage="none"
+							></p>
+
+							<!-- Если переход на задачу, нужно указать её id -->
+							<p mv-if="goto = 'task'" property="task"></p>
+
+							<!-- Конструируем описание перехода в зависимости от его типа -->
+							<meta
+								property="whereTo"
+								content="[if(goto = 'step', group('to': to, 'conditions': conditions),
+														group('task': task, 'conditions': conditions))]"
+							/>
+
+							<h5 mv-if="goto and count(conditions) > 0">Условия перехода</h5>
+							<div mv-if="goto" mv-multiple="conditions" mv-initial-items="0">
+								<label>
+									Список
+									<span
+										property="checklist"
+										mv-edit-type="number"
+										mv-edit-min="1"
+										mv-default="1"
+									></span>
+								</label>
+
+								<label>
+									Пункты
+									<span mv-multiple="items"></span>
+								</label>
+							</div>
+						</div>
+					</section>
 
 					<h3 class="hidden">Уведомление</h3>
 					<section class="hidden" property="notification">

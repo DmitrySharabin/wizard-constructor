@@ -41,4 +41,38 @@
 			}
 		}
 	});
+
+	await Mavo.inited;
+
+	$(".mv-bar a[download$='.json']").addEventListener("mousedown", evt => {
+		// Так как полностью описать ворфлоу средствами Mavo без JS невозможно,
+		// внесём нужные изменения в JSON-файл на этапе его выгрузки
+
+		// Получаем все данные из приложения
+		const data = JSON.parse(Mavo.all["wizardConstructor"].toJSON());
+		const workflow = data.workflow;
+
+		// Удаляем существующий воркфлоу (предварительно сохранив его для последующей обработки),
+		// т. к. тот формат, что сгенерирован Mavo, не понимает ИРБ
+		delete data["workflow"];
+
+		if (workflow.length) {
+			const ret = {};
+
+			// Если есть, с чем работать, просто приводим данные к виду, принимаемому ИРБ
+			workflow.forEach(step => {
+				const [from, ...flow] = step.res;
+
+				$.extend(ret, { [from]: flow });
+			});
+
+			// И добавляем поле форкфлоу к данным для последующего сохранения
+			$.extend(data, { workflow: ret });
+		}
+
+		// А так осуществляется непосредственное сохранение файла с данными
+		evt.target.href =
+			"data:application/json;charset=UTF-8," +
+			encodeURIComponent(Mavo.safeToJSON(data));
+	});
 })();

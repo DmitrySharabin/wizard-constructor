@@ -306,6 +306,11 @@ h4.title,
 	color: var(--main-color, inherit);
 }
 
+/* Стилизация элементов внутри блока с описанием воркфлоу */
+[property="flow"] h4 label {
+	margin-left: 0.7em;
+}
+
 /* Стилизация редактируемых блоков */
 [property]:not(select):not(input)[mv-mode="edit"] {
 	border: 1px solid var(--main-color, inherit);
@@ -401,6 +406,11 @@ button[class*="-button"]:hover,
 .switch-buttons button:hover,
 .koib-mode button:hover {
 	filter: invert(100%);
+}
+
+/* Стилизация кнопки Скачать */
+.mv-bar a[download$=".json"]::before {
+	content: "⬇";
 }
 
 /* Стилизация визуального редактора */
