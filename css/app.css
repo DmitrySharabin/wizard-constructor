@@ -113,7 +113,8 @@ main {
 	padding: 0.4em 1em;
 }
 
-[mv-mode="edit"] .koib-mode button::before {
+[mv-mode="edit"] .koib-mode button::before,
+.delete-button::before {
 	content: "✕";
 	margin-right: 0.3em;
 	font-weight: bold;
@@ -395,7 +396,8 @@ button.mv-add:hover {
 }
 
 .move-button,
-.clone-button {
+.clone-button,
+.delete-button {
 	font-size: 13px;
 	margin: 5px;
 	padding: 5px;
