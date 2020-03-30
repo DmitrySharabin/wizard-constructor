@@ -49,7 +49,7 @@
 		// внесём нужные изменения в JSON-файл на этапе его выгрузки
 
 		// Получаем все данные из приложения
-		const data = JSON.parse(Mavo.all["wizardConstructor"].toJSON());
+		const data = Mavo.all["wizardConstructor"].getData();
 		const workflow = data.workflow;
 
 		// Удаляем существующий воркфлоу (предварительно сохранив его для последующей обработки),
