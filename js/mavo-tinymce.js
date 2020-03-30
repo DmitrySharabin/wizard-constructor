@@ -45,7 +45,12 @@ Mavo.Elements.register(".tinymce", {
 		}
 	},
 	getValue: (element) => {
-		return element.tinymce ? element.tinymce.getContent() : element.innerHTML;
+		// Добавил в конец возврат пробела, если element.innerHTML является пустой строкой.
+		// Это странно, но при чтении файла свойства, редактируемые с помощью tinymce, должны что-то считывать из него.
+		// Если соответствующего значения в файле нет, возникает ошибка “Неверный формат файла”.
+		// Не помню, чтобы такая ошибка была раньше, но здесь возникла. Проверю, возникает ли она в других случаях,
+		// и, если что, заведу issue. Пока пусть будут такие костыли.
+		return element.tinymce ? element.tinymce.getContent() : element.innerHTML || " ";
 	},
 	setValue: (element, value) => {
 		const content = serializer.serialize(parser.parse(value));
