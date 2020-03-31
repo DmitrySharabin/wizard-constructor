@@ -137,7 +137,8 @@ main {
 }
 
 /* Указание режима работы */
-.exec-mode .title {
+.exec-mode .title,
+.type .title {
 	display: inline-block;
 }
 
