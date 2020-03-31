@@ -395,8 +395,6 @@
 					</div>
 
 					<section class="hidden" mv-multiple="workflow" mv-initial-items="0">
-						<meta property="flowNum" content="[$index]" />
-
 						<h4 class="hidden">С шага</h4>
 						<p property="from" mv-edit="#steps-list" mv-storage="none"></p>
 
@@ -411,23 +409,10 @@
 						<div mv-multiple="flow" mv-storage="none">
 							<h4 class="hidden">
 								перейти на
-								<label>
-									<input
-										property="goto"
-										type="radio"
-										name="goto[flowNum][$index]"
-										value="step"
-									/>
-									шаг
-								</label>
-								<label>
-									<input
-										type="radio"
-										name="goto[flowNum][$index]"
-										value="task"
-									/>
-									задачу
-								</label>
+								<select property="goto">
+									<option value="step">шаг</option>
+									<option value="task">задачу</option>
+								</select>
 							</h4>
 
 							<!-- Если переход на шаг, нужно указать, на какой -->

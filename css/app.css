@@ -308,8 +308,11 @@ h4.title,
 }
 
 /* Стилизация элементов внутри блока с описанием воркфлоу */
-[property="flow"] h4 label {
-	margin-left: 0.7em;
+[property="flow"] h4 select {
+	margin-left: 0.2em;
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
 }
 
 /* Стилизация редактируемых блоков */
