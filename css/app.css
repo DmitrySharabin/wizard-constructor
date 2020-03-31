@@ -116,7 +116,7 @@ main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 20px 10px;
+	margin: 10px;
 }
 
 [mv-mode="edit"] .koib-mode input {
@@ -140,6 +140,10 @@ main {
 .exec-mode .title,
 .type .title {
 	display: inline-block;
+}
+
+.exec-mode .title {
+	margin-bottom: 2em;
 }
 
 /* Стилизация блоков с шагами визарда */
@@ -323,9 +327,20 @@ summary {
 h4.title,
 .title {
 	margin: 10px;
+	margin-top: 1.35em;
 	font-style: italic;
 	font-weight: 300;
 	color: var(--main-color, inherit);
+}
+
+h3 + h4.title,
+h3 + .title,
+section > .title:first-of-type {
+	margin-top: initial;
+}
+
+h3:not(:first-of-type) {
+	margin-top: 1.2em;
 }
 
 /* Стилизация элементов внутри блока с описанием воркфлоу */
