@@ -58,6 +58,17 @@ footer {
 	color: var(--contrast-color, inherit);
 }
 
+header h1 {
+	font-size: 300%;
+}
+
+header p {
+	margin-left: 10px;
+	margin-top: -0.3em;
+	letter-spacing: 0.05em;
+	font-weight: 300;
+}
+
 footer {
 	text-align: center;
 }
