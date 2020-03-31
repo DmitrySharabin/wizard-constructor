@@ -172,6 +172,14 @@
 						</div>
 					</section>
 
+					<label class="hidden exec-mode">
+						<h4 class="title">Режим работы</h4>
+						<select property="exec_mode">
+							<option value="background">с фоновым режимом</option>
+							<option value="permanent">непрерывный</option>
+						</select>
+					</label>
+
 					<h3 class="hidden">Параметры уведомления</h3>
 					<section class="hidden" mv-multiple="run_at" mv-initial-items="0">
 						<h4 class="hidden title">Время</h4>
@@ -182,14 +190,6 @@
 						</label>
 					</section>
 					<button class="mv-add-run_at">Добавить время</button>
-
-					<label class="hidden">
-						Режим работы
-						<select property="exec_mode">
-							<option value="background">с фоновым режимом</option>
-							<option value="permanent">непрерывный</option>
-						</select>
-					</label>
 
 					<h3 class="hidden">Шаги</h3>
 					<meta property="numOfSteps" content="[count(steps)]" />

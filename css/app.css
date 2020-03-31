@@ -46,6 +46,10 @@ h6 {
 	margin: 10px;
 }
 
+select {
+	font-size: 90%;
+}
+
 /* Стилизация шапки и подвала */
 header,
 footer {
@@ -119,6 +123,11 @@ main {
 	margin-right: 0.3em;
 	font-weight: bold;
 	color: var(--description-color, inherit);
+}
+
+/* Указание режима работы */
+.exec-mode .title {
+	display: inline-block;
 }
 
 /* Стилизация блоков с шагами визарда */
