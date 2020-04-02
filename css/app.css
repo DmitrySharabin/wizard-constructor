@@ -454,6 +454,11 @@ button[class*="-button"]:hover,
 	content: "⬇";
 }
 
+/* Стилизация кнопки Создать */
+.mv-bar .new-file::before {
+	content: "📄";
+}
+
 /* Стилизация визуального редактора */
 .tinymce ul {
 	padding-left: 30px;

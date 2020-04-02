@@ -119,4 +119,8 @@
 			"data:application/json;charset=UTF-8," +
 			encodeURIComponent(Mavo.safeToJSON(data));
 	});
+
+	$(".mv-bar button.new-file").addEventListener("click", evt => {
+		localStorage.removeItem("wizardConstructor");
+	});
 })();
