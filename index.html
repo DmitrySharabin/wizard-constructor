@@ -441,23 +441,24 @@
 														group('task': task, 'conditions': conditions))]"
 							/>
 
-							<h5 mv-if="goto and count(conditions) > 0">Условия перехода</h5>
+							<h4 mv-if="goto and count(conditions) > 0">
+								если выбран пункт
+							</h4>
 							<div mv-if="goto" mv-multiple="conditions" mv-initial-items="0">
-								<label>
-									Список
-									<span
-										property="checklist"
-										mv-edit-type="number"
-										mv-edit-min="1"
-										mv-default="1"
-									></span>
-								</label>
+								<!-- Вычисляем номер списка по номеру его пункта — число до первой точки в номере пункта и есть номер списка -->
+								<meta property="checklist" content="[to(get(items, 0), '.')]" />
 
-								<label>
-									Пункты
-									<span mv-multiple="items"></span>
-									<button class="mv-add-items">Добавить пункт</button>
-								</label>
+								<span mv-multiple="items" mv-default="1.1"></span>
+								<span class="list-number-hint">списка [checklist]</span>
+								<button class="mv-add-items">Добавить пункт</button>
+
+								<p
+									class="error"
+									mv-if="has(false, to(items, '.') = to(get(items, 0), '.'))"
+								>
+									Нельзя указывать пункты разных списков. Для пунктов другого
+									списка добавьте отдельное условие.
+								</p>
 							</div>
 							<button class="mv-add-conditions">
 								Добавить условие

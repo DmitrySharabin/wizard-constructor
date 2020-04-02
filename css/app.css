@@ -360,6 +360,23 @@ h3:not(:first-of-type) {
 	font-weight: inherit;
 }
 
+[property="conditions"] .list-number-hint {
+	color: var(--description-color, inherit);
+	font-weight: 500;
+}
+
+[property="conditions"] .error {
+	color: #b00;
+	font-weight: bold;
+	font-size: smaller;
+	text-transform: initial;
+}
+
+[property="conditions"] .error::before {
+	content: "⚠️ ";
+	filter: invert() hue-rotate(-200deg);
+}
+
 /* Стилизация редактируемых блоков */
 [property]:not(select):not(input)[mv-mode="edit"] {
 	border: 1px solid var(--main-color, inherit);
