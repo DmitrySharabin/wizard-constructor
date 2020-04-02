@@ -122,5 +122,6 @@
 
 	$(".mv-bar button.new-file").addEventListener("click", evt => {
 		localStorage.removeItem("wizardConstructor");
+		location.reload();
 	});
 })();
