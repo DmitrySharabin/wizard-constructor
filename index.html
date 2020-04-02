@@ -345,11 +345,9 @@
 							<h5 class="hidden">Пункты списка</h5>
 							<section mv-multiple="items">
 								<!-- id пункта -->
-								<meta
-									property="id"
-									content="[checklists.$index + 1].[$index + 1]"
-									mv-storage="inherit"
-								/>
+								<span class="hidden" property="id" mv-storage="inherit">
+									[checklists.$index + 1].[$index + 1]
+								</span>
 
 								<label class="list-item">
 									<input

@@ -254,6 +254,15 @@ summary {
 	margin: 20px 0;
 }
 
+[property="checklists"] [property="items"] [property="id"] {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	color: var(--description-color, inherit);
+	font-size: 150%;
+	font-weight: 600;
+}
+
 /* Стилизация границ списка сверху и снизу */
 [property="checklists"]:not([mv-mode="edit"]),
 .list-instruction:not([mv-mode="edit"]) {
