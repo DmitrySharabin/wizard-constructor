@@ -448,7 +448,11 @@
 								<!-- Вычисляем номер списка по номеру его пункта — число до первой точки в номере пункта и есть номер списка -->
 								<meta property="checklist" content="[to(get(items, 0), '.')]" />
 
-								<span mv-multiple="items" mv-default="1.1"></span>
+								<span
+									mv-multiple="items"
+									mv-default="1.1"
+									datatype="string"
+								></span>
 								<span class="list-number-hint">списка [checklist]</span>
 								<button class="mv-add-items">Добавить пункт</button>
 
