@@ -140,7 +140,7 @@
 		"keywords": [],
 		"template": true,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"]
+		"election_types": ["2", "3", "4", "5"]
 	},
 	{
 		"id": "01.1.69.НЕОИО",
@@ -635,10 +635,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 9,
-		"__total_pages": 9,
-		"__sha256": "cdabed348339488e1d524bc24290a72cd283584d9f4005ff3c545d889862e1cd"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "01.1.43",
@@ -1144,10 +1141,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["8", "11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ac001b5c2e67777dbcbe21023ecde4dd6ef9987804dd7c7593af0a24d3f6a786"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "05.1.104",
@@ -1412,10 +1406,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["12"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "f534170223a007014b937d6a4de50f9ce4552f5a0ee7df290629bfbca006188b"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "08.2.47",
@@ -1426,10 +1417,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "06c30f899341e568bc84bf860423fd53ee3d4555aafc454f078e3931a3c5e967"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "08.2.48",
@@ -1440,10 +1428,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "25c4c14bf8d79de6705617a96863268fedb5fbf3eb160ffbe902c062ba1c2193"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "08.2.49",
@@ -1454,10 +1439,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ec22ab6591a90e243be6ef1bac3e3850add260277c0c212114ba26cf7ecab727"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "02.2.50",
@@ -1468,10 +1450,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["2"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "168145b5f5c2fa1480c81ac34a7c5c830cf4b7e2ae0bd995c8f67837345df66b"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "02.2.51",
@@ -1482,10 +1461,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "d0c293f80b0b6ac9fdd4c02a091700a878f18ad11298191f8b8c3d22330552f9"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "02.2.52",
@@ -1496,10 +1472,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "6da02a162a6452a7817fb2b9eea9d9b559bc8ca54aa413d32ec45c9086dd9e29"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "02.2.94",
@@ -1510,10 +1483,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["8"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "8761881b275b210a8d48d8cb7243d38cc934c1bc262c6da3a7d15e9141e67f62"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "03.2.03",
@@ -1524,10 +1494,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["2", "3"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "0856e699ddf295a7ea115fb21755398573eb793e077698b7d5a470f098f70fec"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "03.2.04",
@@ -1538,10 +1505,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1", "3"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "9f5096358f89ac9a0026e7d6aed21aa6f5ef4b79065abc096303c9705996ae41"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "03.2.93",
@@ -1552,10 +1516,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 2,
-		"__total_pages": 2,
-		"__sha256": "2e85cbbfb028df015f693067a42d6dffd4c0a60825fb38f0740278009f378117"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.10",
@@ -1566,10 +1527,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["2"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "f6fa5b2bd542a4259a6697a8dc02c4974a594da096d33b854abe21909f11a78b"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.11",
@@ -1580,10 +1538,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1", "4"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "34364e60af24232d3723d0dd0599c9327326c6aebb23a017cccc7910410534d3"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.12",
@@ -1594,10 +1549,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1", "4"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "a36b07246477c289e99915c894066c7868d8fd22d05ea440da87bb83ec68d326"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.14",
@@ -1608,10 +1560,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["3"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "225ae336a0db78fb4945d1ce6f7290a91a051187e13c2d2b296fd1c27cfd95b9"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.15",
@@ -1622,10 +1571,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1", "3"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "a1f49ad74babf8e84ceb76d5eccc2fd2a31e698b668cc3d2e85961d198e5c34e"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.35",
@@ -1636,10 +1582,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1", "3"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "0a6a79bf0d5c454666a04065ec6cd13810b0cf9d518cfe78d4e8dda5e059453a"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.1.40",
@@ -1672,10 +1615,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5", "11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "1195841f4b36d755f2d0dfbc891e9678974e5933b1e24f9374d2ade0defedd56"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.1.115",
@@ -1697,10 +1637,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "115d95cbf93d57d98223bc79d83da1c737c5dc972ea6e628e30fc88bd1f65332"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.55",
@@ -1711,10 +1648,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "983dcf867d9ed4cea2cf46d6d8cfe028e6789eb078cd9c7320658a246bb94a34"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.56",
@@ -1725,10 +1659,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "d559a253be5fc8cc9f174d0c95e504ca2cd5670f221547924558c836f047d25d"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.57",
@@ -1739,10 +1670,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "56b4ae53c670687ff4e65f9ca834a18920c9996de2294a6a1cb66e03305b2e3a"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.58",
@@ -1753,10 +1681,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "58a895725d8deee48a08f4cff1d2a920a48d61b0cef83e0ebc70227c37586df4"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.59",
@@ -1767,10 +1692,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "3754a76ccaaeffc6cfdaef4f9618035e98b1aca5da79e6bcfcab90262a1ba4a3"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.2.91",
@@ -1781,10 +1703,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "6202ef866862c3a626ca55acbfc1cb9e23bbd12b553fce9829e3a539c095bf39"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "08.2.02",
@@ -1795,10 +1714,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4", "5"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "a4d491e7f0434579dff99cda5727f50af4b865cde6d5be0a0b16c800f16676fb"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.1.116",
@@ -2019,10 +1935,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4", "7"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "d93ce7aa7f13e8ab85ad16a914872918d552db931c5ec3b1610d522f32673af2"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "02.1.14",
@@ -2066,10 +1979,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "f90809cdb0c4077594ad653098d3faf1a13031e919b07233b49286c912b30ffc"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "08.1.34",
@@ -2102,10 +2012,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["8"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "78a894516b0ce0faa5a47e3007d6a983fb1558cb5f81e5efe699107a6ad0e61d"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "12.2.08",
@@ -2116,10 +2023,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["8"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "a8f1da050db8e79e1da0d1663dc57573b5eb4e8d39e7a19abf3de45219245e8c"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "08.1.42",
@@ -2174,10 +2078,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "5446acaeecfda96467d3f101dcf492aaecbe5fdc493620d4f71b828ee3263eac"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.23",
@@ -2188,10 +2089,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "8a182d82b9527ba52f309e1980a36d9eedd2d89b72a227fe2e0dfca0a4d679e4"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.24",
@@ -2202,10 +2100,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ee07d7d10ed48c9013fff4a786cffad9267cbbae7e52bf8707f861d7190dad37"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.25",
@@ -2216,10 +2111,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "96b567fefcc458618a16d89db3e5d239ef7de8016b77f0de2795dc3e6fcce621"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.26",
@@ -2230,10 +2122,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "c92eb4566da34696afb3daa366ef5a0e4177f4f94d521dd400275beed682344b"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.27",
@@ -2244,10 +2133,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "3af3eb3495af0719c6d755a9c05d28b18b335190ee1be753847918deaca5f44b"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.28",
@@ -2258,10 +2144,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "92f1c8531056b0cf6070a3700e6dee11c04a7f7262a9abb11e4f1568db6bd3b4"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.29",
@@ -2272,10 +2155,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "6e895367ebcb81a65ef4396ebab15bd3b93ea790ae9ffcbfcc01291d7f591d22"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.30",
@@ -2286,10 +2166,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "78f2c757ff223c407a1c2fd85a871d28097b231f604498f8235d0ffa8cd84e04"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.32",
@@ -2300,10 +2177,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "5fd4b5eea1a1ca8f7c1a941da0feec01e0e36e0ad4feaa05627f573fd21561e2"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "01.1.53",
@@ -2313,7 +2187,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["2", "3", "4", "5"]
 	},
 	{
@@ -2324,7 +2198,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["1"]
 	},
 	{
@@ -2335,7 +2209,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["2", "3", "4", "5"]
 	},
 	{
@@ -2346,7 +2220,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["1"]
 	},
 	{
@@ -2358,10 +2232,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["12"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "af7f46d06a913f98a202af35f2964f0a35399fed92579f063bb67cb997d06290"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.33",
@@ -2372,10 +2243,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "dcf6b7490d5b96746dd47060bdc382203c2f0573531302411ce477711edd7186"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.36",
@@ -2386,10 +2254,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "622398157950f81851693a4669cdd0b227fc5380407e5414ab1ce7ebeb24e516"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.73",
@@ -2400,10 +2265,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["4"],
-		"__image_count": 2,
-		"__total_pages": 2,
-		"__sha256": "53d6e6fd729efa38620eb1017bb34f2057accd2a219ef2b0fde3b9e87c2e20e9"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.74",
@@ -2414,10 +2276,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b8223426bc7f20a657bcff20b1892f05ff3fd9519b1bbb69dd7a3116c12ec4da"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.75",
@@ -2428,10 +2287,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "8db78fd533f61eec58405759c437be29952757de2342010348102a1d6abcbf5f"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.76",
@@ -2442,10 +2298,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["3"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "11c3ae0bf2b17de89406276a2d14b32c30ee115c401f6fa577064c379fde8f0e"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.77",
@@ -2456,10 +2309,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["3"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "7fea3511d6dd36ac4ccb99a59df7cc86d9821da737cf792443043c529d866ba9"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.78",
@@ -2470,10 +2320,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["3"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ca79c5e611e84c8a835b24fa79ecc4ecffed29b2563dd8a6b9a2e8d823ab8f4f"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.79",
@@ -2484,10 +2331,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["3"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ef2b29097eb2fe0014e7331b87ec4d10670f6313f8f8ebbab01285dd5cff3c2d"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.80",
@@ -2498,10 +2342,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "0743192b218e7e5ee373856f678cbacf5344c894fc902df512b59064905e1fea"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.81",
@@ -2512,10 +2353,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "920c89f1ad6e1092293530bb5cc7d406512162994821a33a74cae6393b3ee89d"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.82",
@@ -2526,10 +2364,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b86c25757b57ec7be702fd95301b2607fa92dab39c2f0844944be92f7950f1b2"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.83",
@@ -2540,10 +2375,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["4"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "0e63ec8c7f4f0f8b8294c0180c8a5a32c0a6373a7c262b4be0bb5a17664d49cb"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.84",
@@ -2554,10 +2386,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["7"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b91ff0dfeed727c68331a2319caded631a8cf2fb638a2a79eec83f6076a3c84e"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.85",
@@ -2568,10 +2397,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["7"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ac04e438b9b60314fabaf80877d3d4c733140a4e053973c7c77d757a6197671e"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.86",
@@ -2582,10 +2408,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "c1f9b02325cad1abc7d9ca594125cc0a3868eeee6d7dbafc4b276fcb9acdf8c7"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.87",
@@ -2596,10 +2419,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "93127d646f305f5f3a6313eca7ad653758fce8b4a823faeca33e979cb8ffdbe2"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.88",
@@ -2610,10 +2430,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5"],
-		"election_types": ["4"],
-		"__image_count": 2,
-		"__total_pages": 2,
-		"__sha256": "6e869a0f30919ef8fb326e83dfd10caf7a951de4df859e73f9f5668dfdb6e264"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.89",
@@ -2624,10 +2441,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "fc7a30f639078306910ed441ffa1af06aaba3ff0a9e10feffdb897e514161c80"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.90",
@@ -2638,10 +2452,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5", "15"],
-		"election_types": ["4"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "ec79a3019e2a76ad03fdfa337e29906bab176a0c50f1fcd6f7d46f7c80e81afc"
+		"election_types": ["4"]
 	},
 	{
 		"id": "15.2.95",
@@ -2652,10 +2463,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["15"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "72ace8157de0ffef107fd40e894ccb5a1294923cd759fec9831461e89f0af574"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.1.55",
@@ -2721,10 +2529,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 4,
-		"__total_pages": 4,
-		"__sha256": "c409f412683737dc325410ce88e28aa7a51d41a7ffdd5933dd8e22bc847fa3f9"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.06",
@@ -2735,10 +2540,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 24,
-		"__total_pages": 24,
-		"__sha256": "3d38ab6922f3b6a0e4e2d4527fef50cf006c7b412a03910ee8fff33694a37586"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.09",
@@ -2749,10 +2551,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["4", "5"],
-		"__image_count": 204,
-		"__total_pages": 204,
-		"__sha256": "c941d85f61f9a676c03d693344cfffd8420a60546346ca2379350ca6b0b99955"
+		"election_types": ["4", "5"]
 	},
 	{
 		"id": "15.2.13",
@@ -2763,10 +2562,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 259,
-		"__total_pages": 259,
-		"__sha256": "19211c6c7da8e4734545a54237809d8726613b0c065be91c9f62782bc21ed2cf"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.2.20",
@@ -2777,10 +2573,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 5,
-		"__total_pages": 5,
-		"__sha256": "9d8703d7772b833f80148629a5a7cf83bc1706222c0f2296c064881dd8a1bd7d"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "15.1.96",
@@ -2790,7 +2583,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["2", "3", "4", "5"]
 	},
 	{
@@ -2801,7 +2594,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["1"]
 	},
 	{
@@ -2812,7 +2605,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["2", "3", "4", "5"]
 	},
 	{
@@ -2823,7 +2616,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["1"]
 	},
 	{
@@ -2890,10 +2683,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["5"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "44c691eb344d049d3c63a0c27c99a61c04d114ff1bfae345bb105e8481a26baa"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "04.1.128",
@@ -2938,7 +2728,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["2", "3", "4", "5"]
 	},
 	{
@@ -2949,7 +2739,7 @@
 		"category": "form",
 		"keywords": [],
 		"template": true,
-		"categories": ["2"],
+		"categories": ["4"],
 		"election_types": ["1"]
 	},
 	{
@@ -2994,10 +2784,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["11", "12"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b90f5a6743e4240b8122f446b0fa9abd783d70bb7723afc432de0370cea4a411"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "03.2.123",
@@ -3008,10 +2795,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["12"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 2,
-		"__total_pages": 2,
-		"__sha256": "217ff22ec766374887729cf9289db7bc89d1850edeea74f82da012e1e8fbbd69"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "07.2.124",
@@ -3022,10 +2806,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["10"],
-		"election_types": ["4"],
-		"__image_count": 3,
-		"__total_pages": 3,
-		"__sha256": "52538365d90164f3f23f36dda1a1cf7ae5b8fc86862ab42e3f0532b736910d0e"
+		"election_types": ["4"]
 	},
 	{
 		"id": "03.1.134",
@@ -3631,10 +3412,7 @@
 		"template": false,
 		"categories": ["16"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "60a2ee657aecc8dfd6cfb4774e1ae150ca5c7aea42092c710294fa9f65b237b0"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "03.2.140.КОИБ",
@@ -3646,10 +3424,7 @@
 		"template": false,
 		"categories": ["16"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "610657c3af060e428dbe68056220edf279fd5bdf44f2a15f220ef364c3dd9193"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "03.2.141.КОИБ",
@@ -3661,10 +3436,7 @@
 		"template": false,
 		"categories": ["4"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b49a1d19a6cfec58bd38cd28b8f514357d8a055c281b5a7af8afe5c6a96794f1"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "03.2.142.КОИБ",
@@ -3676,10 +3448,7 @@
 		"template": false,
 		"categories": ["4"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 2,
-		"__total_pages": 2,
-		"__sha256": "c296335ff77808181c9d94ac956c90705cf5a37d11962816e1535dd791f4060c"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "03.2.143.КОИБ",
@@ -3691,10 +3460,7 @@
 		"template": false,
 		"categories": ["4"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "dc57909e725527972cbea18a9f1e1c61d29b580d9524a474c4090d78272fbf39"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "03.2.144.КОИБ",
@@ -3706,10 +3472,7 @@
 		"template": false,
 		"categories": ["4"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "020a993bd211cee95123a9534c7a17b6a8d82c039d8fa637dc0fafdf5cbc409f"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "06.1.145.КОИБ2010",
@@ -3757,10 +3520,7 @@
 		"template": false,
 		"categories": ["11", "16"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b732e3b802be3f25cfdb5cb61d719aa34bd2f98c621517ba8ef884ced22b7299"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "06.1.149.КОИБ",
@@ -3808,10 +3568,7 @@
 		"template": false,
 		"categories": ["5"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "855b490db849a76d4ffe718fc8075d69eb71f39f5aa7d20fd7224f5bbd1dabaa"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "08.1.153.КОИБ",
@@ -3835,10 +3592,7 @@
 		"template": false,
 		"categories": ["5"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "b99eca8d86dd3597a3ce4006d88c82303c776ba7d2bf85da9d5b802c76ee4cb6"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "08.2.156.КОИБ",
@@ -3850,10 +3604,7 @@
 		"template": false,
 		"categories": ["13"],
 		"election_types": ["1", "2", "3", "4", "5"],
-		"only": { "use_koib": true },
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "8e6126cbe7f7a942cfd710f4f86e9e70ad846d77f7c1c4416eab28559afa2fa3"
+		"only": { "use_koib": true }
 	},
 	{
 		"id": "04.1.157.КОИБ",
@@ -4078,10 +3829,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["10", "11"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 2,
-		"__total_pages": 2,
-		"__sha256": "24db78418eeb7e33b1675a7af4b520ff37127f9516a0ae2f191b078a98ca0b72"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "05.3.118",
@@ -4125,10 +3873,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["0"],
-		"election_types": ["0"],
-		"__image_count": 26,
-		"__total_pages": 26,
-		"__sha256": "6aafaefde39c8f6136cc79a05ae8167becf158ec331c079a6bda12d37144056b"
+		"election_types": ["0"]
 	},
 	{
 		"id": "04.2.119",
@@ -4139,10 +3884,7 @@
 		"keywords": [],
 		"template": false,
 		"categories": ["1", "3"],
-		"election_types": ["1", "2", "3", "4", "5"],
-		"__image_count": 1,
-		"__total_pages": 1,
-		"__sha256": "49b047f6f79362bc64e96a0fc2592688cb7a473eccef470b51ddb82d36497a39"
+		"election_types": ["1", "2", "3", "4", "5"]
 	},
 	{
 		"id": "07.1.163",
@@ -4308,5 +4050,16 @@
 		"template": true,
 		"categories": ["1"],
 		"election_types": ["1", "2", "3", "5"]
+	},
+	{
+		"id": "04.1.169",
+		"name": "Акт о нарушении требований к конверту, количеству и качеству избирательных бюллетеней досрочно проголосовавших избирателей.",
+		"file_name": "files/04.1.169.doc",
+		"description": "",
+		"category": "form",
+		"keywords": [],
+		"template": true,
+		"categories": ["1"],
+		"election_types": ["5"]
 	}
 ]
