@@ -3,7 +3,7 @@
 (async () => {
 	Mavo.Plugins.register("wizard", {
 		hooks: {
-			"render-start": env => {
+			"render-start": (env) => {
 				if (env.context.id === "wizardConstructor") {
 					if (env.data) {
 						if (env.data.only) {
@@ -17,11 +17,11 @@
 							if (Array.isArray(koib)) {
 								ret = {
 									mode: "custom",
-									koib
+									koib,
 								};
 							} else {
 								ret = {
-									mode: koib
+									mode: koib,
 								};
 							}
 
@@ -39,13 +39,13 @@
 							for (const prop in data) {
 								// Один шаг в воркфлоу
 								const ret = {
-									from: prop
+									from: prop,
 								};
 
 								// Описание переходов внутри шага
 								const flow = [];
 
-								data[prop].forEach(step => {
+								data[prop].forEach((step) => {
 									const res = {};
 
 									// Определяем, на шаг или задачу устанавливается переход,
@@ -73,7 +73,7 @@
 				}
 			},
 
-			"node-getdata-end": env => {
+			"node-getdata-end": (env) => {
 				if (env.context.property === "only") {
 					// Если свойство only имеет в качестве значения пустую строку,
 					// его не нужно сохранять. Для этого достаточно сообщить Mavo,
@@ -82,13 +82,13 @@
 						env.data = null;
 					}
 				}
-			}
-		}
+			},
+		},
 	});
 
 	await Mavo.inited;
 
-	$(".mv-bar a[download$='.json']").addEventListener("mousedown", evt => {
+	$(".mv-bar a[download$='.json']").addEventListener("mousedown", (evt) => {
 		// Так как полностью описать воркфлоу средствами Mavo без JS невозможно,
 		// внесём нужные изменения в JSON-файл на этапе его выгрузки
 
@@ -104,7 +104,7 @@
 			const ret = {};
 
 			// Если есть, с чем работать, просто приводим данные к виду, принимаемому ИРБ
-			workflow.forEach(step => {
+			workflow.forEach((step) => {
 				const [from, ...flow] = step.res;
 
 				$.extend(ret, { [from]: flow });
@@ -120,7 +120,7 @@
 			encodeURIComponent(Mavo.safeToJSON(data));
 	});
 
-	$(".mv-bar button.new-file").addEventListener("click", evt => {
+	$(".mv-bar button.new-file").addEventListener("click", (evt) => {
 		localStorage.removeItem("wizardConstructor");
 		location.reload();
 	});
