@@ -124,4 +124,26 @@
 		localStorage.removeItem("wizardConstructor");
 		location.reload();
 	});
+
+	$(".workflow-generate-button").addEventListener("click", (evt) => {
+		// Генерируем воркфлоу по умолчанию на основании имеющихся данных:
+		// последовательные независимые переходы с шага на шаг
+		const data = Mavo.all["wizardConstructor"].getData();
+
+		if (data.steps.length) {
+			const steps = data.steps;
+			const workflow = {};
+
+			for (let i = 0; i < steps.length - 1; i++) {
+				workflow[i + 1] = [
+					{
+						to: i + 2,
+						conditions: [],
+					},
+				];
+			}
+
+			Mavo.all["wizardConstructor"].render({ workflow });
+		}
+	});
 })();

@@ -353,6 +353,21 @@ h3:not(:first-of-type) {
 }
 
 /* Стилизация элементов внутри блока с описанием воркфлоу */
+[mv-app][mv-mode="edit"] .workflow-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+[mv-app][mv-mode="edit"] .workflow-header button {
+	font-size: 75%;
+	padding: 0.4em 1em;
+}
+
+[mv-app][mv-mode="edit"] .workflow-header button::before {
+	content: "🛠 ";
+}
+
 [property="flow"] h4 select {
 	margin-left: 0.2em;
 	color: inherit;

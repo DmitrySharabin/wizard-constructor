@@ -392,7 +392,12 @@
 					</details>
 					<button class="mv-add-steps">Добавить шаг</button>
 
-					<h3 class="hidden">Описание переходов (workflow)</h3>
+					<h3 class="hidden workflow-header">
+						Описание переходов (workflow)
+						<button class="workflow-generate-button" mv-if="numOfSteps > 1">
+							Сгенерировать
+						</button>
+					</h3>
 					<!-- Список шагов в инструкции -->
 					<div hidden>
 						<select id="steps-list">
