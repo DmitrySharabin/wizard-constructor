@@ -452,7 +452,6 @@ button.mv-add:hover {
 	font-size: 13px;
 	padding: 8px;
 	margin: 8px;
-	cursor: pointer;
 }
 
 /* Стилизация кнопок перемещения и дублирования шагов */
@@ -466,13 +465,13 @@ button.mv-add:hover {
 	font-size: 13px;
 	margin: 5px;
 	padding: 5px;
-	cursor: pointer;
 }
 
 button[class*="-button"]:hover,
 .switch-buttons button:hover,
 .koib-mode button:hover {
 	filter: invert(100%);
+	cursor: pointer;
 }
 
 /* Стилизация кнопки Скачать */
