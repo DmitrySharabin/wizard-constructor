@@ -69,6 +69,24 @@
 							// Подменяем исходные данные преобразованными
 							$.extend(env.data, { workflow });
 						}
+
+						if (env.data["available_at"]) {
+							const data = env.data["available_at"];
+
+							// Преобразуем данные к структуре, соответствующей структуре данных приложения.
+							// Она отличается от той структуры, что принимает ИРБ.
+							const ret = data.map((range) => {
+								return {
+									...range,
+									days: {
+										fromNum: range.days.from.replace("D", ""),
+										toNum: range.days.to.replace("D", ""),
+									},
+								};
+							});
+
+							$.extend(env.data, { available_at: ret });
+						}
 					}
 				}
 			},

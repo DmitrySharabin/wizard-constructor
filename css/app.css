@@ -146,6 +146,11 @@ main {
 	margin-bottom: 2em;
 }
 
+/* Стилизация блока с параметрами доступности задачи */
+[property="available_at"] > p[property][mv-mode="edit"] {
+	border-color: transparent;
+}
+
 /* Стилизация блоков с шагами визарда */
 [property="steps"] {
 	margin: 10px;

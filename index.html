@@ -205,6 +205,50 @@
 					</section>
 					<button class="mv-add-run_at">Добавить время</button>
 
+					<h3 class="hidden">Периоды доступности</h3>
+					<section
+						class="hidden"
+						mv-multiple="available_at"
+						mv-initial-items="0"
+					>
+						<!-- TODO: Добавить удобный редактор работы с днями доступности задачи -->
+						<p property="days">
+							<meta property="from" content="[fromNum]D" mv-storage="inherit" />
+							<meta property="to" content="[toNum]D" mv-storage="inherit" />
+
+							Задача доступна с
+							<span
+								property="fromNum"
+								mv-edit-type="number"
+								mv-storage="none"
+								mv-default="0"
+							></span>
+							по
+							<span
+								property="toNum"
+								mv-edit-type="number"
+								mv-storage="none"
+								mv-default="0"
+							></span>
+						</p>
+						<p class="error" mv-if="fromNum > toNum">
+							День, с которого доступна задача, не может быть позднее дня, по
+							который она доступна.
+						</p>
+
+						<p property="time">
+							в период времени с
+							<time property="from" datetime="08:00" mv-default="08:00"></time
+							>до
+							<time property="to" datetime="20:00" mv-default="20:00"></time>
+						</p>
+						<p class="error" mv-if="time.from > time.to">
+							Время, с которого доступна задача, не может быть позднее времени,
+							до которого она доступна.
+						</p>
+					</section>
+					<button class="mv-add-available_at">Добавить период</button>
+
 					<h3 class="hidden">Шаги</h3>
 					<meta property="numOfSteps" content="[count(steps)]" />
 					<div class="switch-buttons" hidden="[numOfSteps <= 0]">
