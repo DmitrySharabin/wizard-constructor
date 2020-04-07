@@ -248,6 +248,12 @@
 					</section>
 					<button class="mv-add-available_at">Добавить период</button>
 
+					<div class="hidden" mv-if="type = simple">
+						<h4 class="title">Подробные инструкции</h4>
+						<p mv-multiple="base_tasks"></p>
+						<button class="mv-add-base_tasks">Добавить задачу</button>
+					</div>
+
 					<h3 class="hidden">Шаги</h3>
 					<meta property="numOfSteps" content="[count(steps)]" />
 					<div class="switch-buttons" hidden="[numOfSteps <= 0]">
