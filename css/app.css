@@ -380,14 +380,14 @@ h3:not(:first-of-type) {
 	font-weight: 500;
 }
 
-[property="conditions"] .error {
+.error {
 	color: #b00;
 	font-weight: bold;
 	font-size: smaller;
 	text-transform: initial;
 }
 
-[property="conditions"] .error::before {
+.error::before {
 	content: "⚠️ ";
 	filter: invert() hue-rotate(-200deg);
 }
