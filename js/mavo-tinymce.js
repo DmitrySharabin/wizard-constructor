@@ -40,8 +40,8 @@ Mavo.Elements.register(".tinymce", {
 		});
 	},
 	done: function() {
-		if (this.tinymce) {
-			tinymce.EditorManager.execCommand("mceRemoveEditor", true, this.tinymce.id);
+		if (this.element.tinymce) {
+			tinymce.EditorManager.execCommand("mceRemoveEditor", true, this.element.tinymce.id);
 		}
 	},
 	getValue: (element) => {
