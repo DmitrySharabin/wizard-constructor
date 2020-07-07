@@ -142,7 +142,7 @@
 		// А так осуществляется непосредственное сохранение файла с данными
 		evt.target.href =
 			"data:application/json;charset=UTF-8," +
-			encodeURIComponent(Mavo.safeToJSON(data));
+			encodeURIComponent(Mavo.toJSON(data));
 	});
 
 	$(".mv-bar button.new-file").addEventListener("click", (evt) => {
