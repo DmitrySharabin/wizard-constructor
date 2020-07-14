@@ -28,7 +28,7 @@
 								};
 							} else {
 								ret = {
-									mode: koib,
+									mode: koib + "",
 								};
 							}
 
