@@ -230,7 +230,7 @@
 								mv-default="0"
 							></span>
 						</p>
-						<p class="error" mv-if="fromNum > toNum">
+						<p class="error" mv-if="fromNum and toNum and (fromNum > toNum)">
 							День, с которого доступна задача, не может быть позднее дня, по
 							который она доступна.
 						</p>
