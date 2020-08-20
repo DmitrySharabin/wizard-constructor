@@ -3916,6 +3916,60 @@
 		]
 	},
 	{
+		"id": "15.2.119",
+		"name": "Информационный плакат “Правила голосования с использованием КОИБ–2010”",
+		"file_name": "files/15.2.119.pdf",
+		"description": "",
+		"category": "example",
+		"keywords": [],
+		"template": false,
+		"categories": [],
+		"election_types": [
+			"4"
+		],
+		"only": {
+			"use_koib": [
+				"koib-2010"
+			]
+		}
+	},
+	{
+		"id": "15.2.120",
+		"name": "Информационный плакат “Правила голосования с использованием КОИБ–2017–БАВУ”",
+		"file_name": "files/15.2.120.pdf",
+		"description": "",
+		"category": "example",
+		"keywords": [],
+		"template": false,
+		"categories": [],
+		"election_types": [
+			"4"
+		],
+		"only": {
+			"use_koib": [
+				"koib-2017-bavu"
+			]
+		}
+	},
+	{
+		"id": "15.2.121",
+		"name": "Информационный плакат “Правила голосования с использованием КОИБ–2017”",
+		"file_name": "files/15.2.121.pdf",
+		"description": "",
+		"category": "example",
+		"keywords": [],
+		"template": false,
+		"categories": [],
+		"election_types": [
+			"4"
+		],
+		"only": {
+			"use_koib": [
+				"koib-2017"
+			]
+		}
+	},
+	{
 		"id": "04.1.128",
 		"name": "Примерный текст объявления председателя УИК при организации голосования вне помещения для голосования",
 		"file_name": "files/04.1.128.doc",
@@ -6254,30 +6308,6 @@
 		"election_types": [
 			"5"
 		]
-	},
-	{
-		"id": "07.2.176",
-		"name": "Памятка о порядке подачи заявления избирателя о включении в список избирателей ЦИУ",
-		"file_name": "files/07.2.176.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"10"
-		],
-		"election_types": [
-			"1",
-			"2",
-			"3",
-			"4",
-			"5",
-			"6",
-			"7"
-		],
-		"only": {
-			"use_koib": false
-		}
 	},
 	{
 		"id": "08.1.175",
