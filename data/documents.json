@@ -960,7 +960,8 @@
 		],
 		"election_types": [
 			"3",
-			"4"
+			"4",
+			"5"
 		]
 	},
 	{
@@ -1102,7 +1103,8 @@
 			"9"
 		],
 		"election_types": [
-			"4"
+			"4",
+			"5"
 		]
 	},
 	{
@@ -1166,8 +1168,7 @@
 			"3"
 		],
 		"election_types": [
-			"4",
-			"5"
+			"4"
 		]
 	},
 	{
@@ -1255,6 +1256,7 @@
 			"1",
 			"3",
 			"4",
+			"5",
 			"6"
 		]
 	},
@@ -1303,7 +1305,8 @@
 		],
 		"election_types": [
 			"3",
-			"4"
+			"4",
+			"5"
 		]
 	},
 	{
@@ -1319,6 +1322,7 @@
 		],
 		"election_types": [
 			"1",
+			"5",
 			"6"
 		]
 	},
@@ -1628,7 +1632,8 @@
 		],
 		"election_types": [
 			"3",
-			"4"
+			"4",
+			"5"
 		]
 	},
 	{
@@ -1811,8 +1816,7 @@
 			"4"
 		],
 		"election_types": [
-			"4",
-			"5"
+			"4"
 		]
 	},
 	{
@@ -1828,8 +1832,7 @@
 			"5"
 		],
 		"election_types": [
-			"4",
-			"5"
+			"4"
 		]
 	},
 	{
@@ -2159,13 +2162,7 @@
 			"4"
 		],
 		"election_types": [
-			"1",
-			"2",
-			"3",
-			"4",
-			"5",
-			"6",
-			"7"
+			"4"
 		]
 	},
 	{
@@ -2181,35 +2178,7 @@
 			"4"
 		],
 		"election_types": [
-			"1",
-			"2",
-			"3",
-			"4",
-			"5",
-			"6",
-			"7"
-		]
-	},
-	{
-		"id": "04.2.35",
-		"name": "Пример отметки в списке избирателей о голосовании избирателя вне помещения для голосования",
-		"file_name": "files/04.2.35.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"1",
-			"3"
-		],
-		"election_types": [
-			"1",
-			"2",
-			"3",
-			"4",
-			"5",
-			"6",
-			"7"
+			"4"
 		]
 	},
 	{
@@ -3272,262 +3241,6 @@
 		]
 	},
 	{
-		"id": "15.2.73",
-		"name": "Памятка 1.1 и 1.2 “Организация заседаний УИК” и “Созыв заседаний УИК”",
-		"file_name": "files/15.2.73.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"11"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.74",
-		"name": "Памятка 2.1 “Порядок ознакомления избирателей со списком избирателей и рассмотрение заявлений избирателей о включении в список избирателей по месту жительства”",
-		"file_name": "files/15.2.74.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"1"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.75",
-		"name": "Памятка 2.2 “Порядок ознакомления избирателей со списком избирателей и рассмотрение заявлений избирателей о включении в список избирателей по месту жительства”",
-		"file_name": "files/15.2.75.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"1"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.76",
-		"name": "Памятка 3.1 “Прием и обработка заявлений избирателей о включении избирателей в список избирателей по месту нахождения”",
-		"file_name": "files/15.2.76.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"3"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.77",
-		"name": "Памятка 3.2 “Образец заполнения заявления избирателя о включении избирателя в список избирателей по месту нахождения”",
-		"file_name": "files/15.2.77.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"3"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.78",
-		"name": "Памятка 3.3 “Прием и обработка заявлений о включении избирателей в список избирателей по месту нахождения”",
-		"file_name": "files/15.2.78.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"3"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.80",
-		"name": "Памятка 4.1 “Выдача избирательных бюллетеней в помещении для голосования. Общий порядок”",
-		"file_name": "files/15.2.80.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"4"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.81",
-		"name": "Памятка 4.2 “Выдача избирательных бюллетеней в помещении для голосования”",
-		"file_name": "files/15.2.81.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"4"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.82",
-		"name": "Памятка 4.3 “Выдача избирательных бюллетеней в помещении для голосования. Что делать, если”",
-		"file_name": "files/15.2.82.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"4"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.83",
-		"name": "Памятка 4.4 “Выдача избирательных бюллетеней в помещении для голосования. Что делать, если”",
-		"file_name": "files/15.2.83.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"4"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.84",
-		"name": "Памятка 5.1 “Проведение голосования вне помещения для голосования”",
-		"file_name": "files/15.2.84.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"7"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.85",
-		"name": "Памятка 5.2 “Проведение голосования вне помещения для голосования”",
-		"file_name": "files/15.2.85.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"7"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.86",
-		"name": "Памятка 6.1 “Основы подсчета голосов избирателей”",
-		"file_name": "files/15.2.86.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"5"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.87",
-		"name": "Памятка 6.2 “Основы подсчета голосов избирателей”",
-		"file_name": "files/15.2.87.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"5"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.88",
-		"name": "Памятка 7.1 и 7.2 “Составление УИК протокола об итогах голосования с машиночитаемым кодом”",
-		"file_name": "files/15.2.88.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"5"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.89",
-		"name": "Памятка 8.1 “Работа УИК с протоколом УИК об итогах голосования с машиночитаемым кодом”",
-		"file_name": "files/15.2.89.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"5"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
-		"id": "15.2.90",
-		"name": "Памятка 8.2 “Работа ТИК с протоколами УИК об итогах голосования с машиночитаемым кодом”",
-		"file_name": "files/15.2.90.pdf",
-		"description": "",
-		"category": "example",
-		"keywords": [],
-		"template": false,
-		"categories": [
-			"5",
-			"15"
-		],
-		"election_types": [
-			"4"
-		]
-	},
-	{
 		"id": "15.2.95",
 		"name": "Информационный плакат “Процедура передачи первого экземпляра протокола УИК об итогах голосования, изготовленного с машиночитаемым кодом, в ТИК”",
 		"file_name": "files/15.2.95.pdf",
@@ -4041,7 +3754,8 @@
 			"4"
 		],
 		"election_types": [
-			"1"
+			"1",
+			"5"
 		]
 	},
 	{
@@ -4758,6 +4472,7 @@
 		],
 		"election_types": [
 			"1",
+			"5",
 			"6"
 		]
 	},
@@ -5659,7 +5374,8 @@
 			"3"
 		],
 		"election_types": [
-			"1"
+			"1",
+			"5"
 		]
 	},
 	{
@@ -5747,6 +5463,7 @@
 		],
 		"election_types": [
 			"1",
+			"5",
 			"6"
 		]
 	},
@@ -5916,7 +5633,8 @@
 			"13"
 		],
 		"election_types": [
-			"4"
+			"4",
+			"5"
 		]
 	},
 	{
@@ -7268,6 +6986,26 @@
 		}
 	},
 	{
+		"id": "04.1.214",
+		"name": "Объявление о числе избирателей для вывешивания на информационном стенде помещения для голосования",
+		"file_name": "files/04.1.214.doc",
+		"description": "Источник: дублирует 04.1.40",
+		"category": "form",
+		"keywords": [],
+		"template": false,
+		"categories": [
+			"10",
+			"19"
+		],
+		"election_types": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"5"
+		]
+	},
+	{
 		"id": "03.1.215",
 		"name": "Акт о проведении досрочного голосования с использованием переносного (стационарного) ящика и сейф-пакета",
 		"file_name": "files/03.1.215.doc",
@@ -7320,7 +7058,9 @@
 		"keywords": [],
 		"template": false,
 		"categories": [
-			"WedMay01201910:00:00GMT+0300(MoscowStandardTime)"
+			"1",
+			"5",
+			"19"
 		],
 		"election_types": [
 			"1",
@@ -7341,7 +7081,9 @@
 		"keywords": [],
 		"template": true,
 		"categories": [
-			"WedMay01201910:00:00GMT+0300(MoscowStandardTime)"
+			"1",
+			"5",
+			"19"
 		],
 		"election_types": [
 			"2",
@@ -7681,7 +7423,9 @@
 		"keywords": [],
 		"template": true,
 		"categories": [
-			"WedMay01201910:00:00GMT+0300(MoscowStandardTime)"
+			"1",
+			"5",
+			"19"
 		],
 		"election_types": [
 			"1"
@@ -7702,6 +7446,39 @@
 		"election_types": [
 			"1",
 			"6"
+		]
+	},
+	{
+		"id": "08.1.43.СМЕШ",
+		"name": "Реестр регистрации выдачи заверенных копий протоколов УИК об итогах голосования",
+		"file_name": "files/08.1.43.СМЕШ.doc",
+		"description": "",
+		"category": "form",
+		"keywords": [],
+		"template": true,
+		"categories": [
+			"5",
+			"8"
+		],
+		"election_types": [
+			"5"
+		]
+	},
+	{
+		"id": "12.1.15.СМЕШ",
+		"name": "Список лиц, присутствовавших при проведении голосования (в том числе досрочного), подсчете голосов избирателей и составлении протокола УИК об итогах голосования в день голосования",
+		"file_name": "files/12.1.15.СМЕШ.doc",
+		"description": "",
+		"category": "form",
+		"keywords": [],
+		"template": false,
+		"categories": [
+			"5",
+			"6",
+			"8"
+		],
+		"election_types": [
+			"5"
 		]
 	}
 ]
