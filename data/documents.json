@@ -7471,11 +7471,42 @@
 		"description": "",
 		"category": "form",
 		"keywords": [],
-		"template": false,
+		"template": true,
 		"categories": [
 			"5",
 			"6",
 			"8"
+		],
+		"election_types": [
+			"5"
+		]
+	},
+	{
+		"id": "08.1.32.СМЕШ",
+		"name": "Решение о признании недействительными избирательных бюллетеней, извлеченных из переносного ящика для голосования",
+		"file_name": "files/08.1.32.СМЕШ.doc",
+		"description": "",
+		"category": "form",
+		"keywords": [],
+		"template": true,
+		"categories": [
+			"4"
+		],
+		"election_types": [
+			"5"
+		]
+	},
+	{
+		"id": "08.1.33.СМЕШ",
+		"name": "Решение о признании недействительными избирательных бюллетеней, извлеченных из переносного ящика для голосования",
+		"file_name": "files/08.1.33.СМЕШ.doc",
+		"description": "",
+		"category": "form",
+		"keywords": [],
+		"template": true,
+		"categories": [
+			"4",
+			"5"
 		],
 		"election_types": [
 			"5"
