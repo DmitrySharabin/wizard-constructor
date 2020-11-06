@@ -7520,5 +7520,29 @@
 			"6",
 			"7"
 		]
+	},
+	{
+		"id": "02.2.52.КОИБ",
+		"name": "Образец оформления исключения кандидата 1 из избирательного бюллетеня",
+		"file_name": "files/02.2.52.КОИБ.pdf",
+		"description": "",
+		"category": "example",
+		"keywords": [],
+		"template": false,
+		"categories": [
+			"4"
+		],
+		"election_types": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7"
+		],
+		"only": {
+			"use_koib": true
+		}
 	}
 ]
